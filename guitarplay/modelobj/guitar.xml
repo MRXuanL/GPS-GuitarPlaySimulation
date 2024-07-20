@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<mujoco model="imported_obj">
+    <include file="./visual.xml"/>
+    <include file="./skybox.xml"/>
+    <include file="./materials.xml"/>
+    <!-- <include file="./left_hand.xml"/> -->
+    <compiler angle="radian" meshdir="assets" autolimits="true"/>
+    <asset>
+        <!-- 定义OBJ模型 -->
+        <material name="white" specular="0.6" shininess="0.5" rgba="0.7529 0.7529 0.7843 1"/>
+        <material name="black" specular="0.5" shininess="0.25" rgba="0.16355 0.16355 0.16355 1"/>
+        <material name="gray" specular="0.0" shininess="0.25" rgba="0.80848 0.80848 0.80848 1"/>
+        <material name="metallic" specular="0" shininess="0.25" rgba="0.9 0.9 0.9 1"/>
+        <mesh name="S_Circle_031" file="guitar/S_Circle_031.obj"/>
+        <mesh name="S_Plane1" file="guitar/S_Plane1.obj"/>
+        <mesh name="S_Plane2" file="guitar/S_Plane2.obj"/>
+        <mesh name="cassa" file="guitar/cassa.obj"/>
+        <mesh name="cassa_001" file="guitar/cassa_001.obj"/>
+        <mesh name="S_chiave_la" file="guitar/S_chiave_la.obj"/>
+        <mesh name="S_ghiera_la_e_si" file="guitar/S_ghiera_la_e_si.obj"/>
+        <mesh name="S_jack" file="guitar/S_jack.obj"/>
+        <mesh name="S_manico" file="guitar/S_manico.obj"/>
+        <mesh name="S_manico1" file="guitar/S_manico1.obj"/>
+        <mesh name="S_manico2" file="guitar/S_manico2.obj"/>
+        <mesh name="S_perno_sol" file="guitar/S_perno_sol.obj"/>
+        <mesh name="S_pirioli" file="guitar/S_pirioli.obj"/>
+        <mesh name="S_plancia" file="guitar/S_plancia.obj"/>
+        <mesh name="S_ponte" file="guitar/S_ponte.obj"/>
+        <mesh name="S_ponticello" file="guitar/S_ponticello.obj"/>
+        <mesh name="S_reggicinghia" file="guitar/S_reggicinghia.obj"/>
+        <mesh name="S_reggiponte" file="guitar/S_reggiponte.obj"/>
+        <mesh name="S_vite_reggicinghia" file="guitar/S_vite_reggicinghia.obj"/>
+        <mesh name="cordas" file="guitar/cordas.obj" />
+        <mesh name="cordas_001" file="guitar/cordas_001.obj"/>
+        <mesh name="cordas_002" file="guitar/cordas_002.obj"/>
+        <mesh name="cordas_003" file="guitar/cordas_003.obj"/>
+        <mesh name="cordas_004" file="guitar/cordas_004.obj"/>
+        <mesh name="cordas_005" file="guitar/cordas_005.obj"/>
+        <mesh name="cordas_006" file="guitar/cordas_006.obj"/>
+        <mesh name="cordas_007" file="guitar/cordas_007.obj"/>
+        <mesh name="cordas_008" file="guitar/cordas_008.obj"/>
+        <mesh name="cordas_009" file="guitar/cordas_009.obj"/>
+        <mesh name="cordas_010" file="guitar/cordas_010.obj"/>
+        <mesh name="cordas_011" file="guitar/cordas_011.obj"/>
+    </asset>
+    <!-- 定义一个可移动的物体 -->
+    <worldbody>
+        <light name="light1" pos="0 2 0" dir="0 -1 0.65" diffuse="0.6 0.6 0.6" specular="1 1 1" mode="trackcom"/>
+        <body name="righthand" pos="0.15 0.02 0.68"> </body>
+        <body name="lefthand" pos="-0.25 0.02 0.68"> </body>
+        <!-- <geom type="sphere" size="0.01" pos="-0.25 0.02 0.68" rgba="1 1 0 1"/> -->
+        <!-- <site name="test6" type="sphere" size="0.003" pos="0.115 0.01 0.723" rgba="1 0 0 1"/>
+        <site name="test5" type="sphere" size="0.003" pos="0.1275 0.01 0.714" rgba="1 0 0 1"/>
+        <site name="test4" type="sphere" size="0.003" pos="0.140 0.01 0.705" rgba="1 0 0 1"/>
+        <site name="test3" type="sphere" size="0.003" pos="0.1427 0.01 0.695" rgba="1 0 0 1"/>
+        <site name="test2" type="sphere" size="0.003" pos="0.1635 0.01 0.686" rgba="1 0 0 1"/>
+        <site name="test1" type="sphere" size="0.003" pos="0.1837 0.01 0.677" rgba="1 0 0 1"/> -->
+        <site name="test6" type="sphere" size="0.003" pos="0.115 0.01 0.723" rgba="1 0 0 0"/>
+        <site name="test5" type="sphere" size="0.003" pos="0.1275 0.01 0.714" rgba="1 0 0 0"/>
+        <site name="test4" type="sphere" size="0.003" pos="0.140 0.01 0.705" rgba="1 0 0 0"/>
+        <site name="test3" type="sphere" size="0.003" pos="0.1427 0.01 0.695" rgba="1 0 0 0"/>
+        <site name="test2" type="sphere" size="0.003" pos="0.1635 0.01 0.686" rgba="1 0 0 0"/>
+        <site name="test1" type="sphere" size="0.003" pos="0.1837 0.01 0.677" rgba="1 0 0 0"/>
+        <camera name="main" mode="targetbody" target="guitar" pos="0 1 1"/>
+        <!-- <camera name="main" mode="targetbody" target="lefthand" pos="-0.25 0.5 0.7"/> -->
+        <!-- <camera name="right" mode="targetbody" target="righthand" pos="-0.1 0.05 0.7"/> -->
+        <!-- <camera name="left" mode="targetbody" target="lefthand" pos="0 0.1 0.7"/> -->
+
+        <!-- <geom name="floor" type="plane" conaffinity="1" size="100 100 .2" material="grid"/> -->
+        <body name="guitar" pos="0 0 0.7" euler="0 1.57075 0">
+            <geom type="mesh" mesh="S_Circle_031" rgba="0.3 0.2 0 1" size="1" material="white"/>
+            <geom type="mesh" mesh="S_Plane1" rgba="0 0 0 1" size="1" material="white"/>
+            <geom type="mesh" mesh="S_Plane2" rgba="0.7 0.7 0.7 1"  size="1" material="white"/>
+            <geom type="mesh" mesh="cassa" rgba="0.3 0.2 0. 1" size="1" material="white"/>
+            <geom type="mesh" mesh="cassa_001" rgba="0.55 0.5 0. 1" size="1" material="white"/>
+            <geom type="mesh" mesh="S_chiave_la" rgba="0. 0. 0. 1"  size="1" material="white"/>
+            <geom type="mesh" mesh="S_ghiera_la_e_si" rgba="0. 0. 0 1"  size="1" material="white"/>
+            <geom type="mesh" mesh="S_jack" rgba="0 0 0 1"  size="1" material="white"/>
+            <geom type="mesh" mesh="S_manico" rgba="0.3 0.2 0 1"  size="1" material="white"/>
+            <geom type="mesh" mesh="S_manico1" rgba="0.3 0.2 0 1"  size="1" material="white"/>
+            <geom type="mesh" mesh="S_manico2" rgba="0.3 0.2 0 1"  size="1"/>
+            <geom type="mesh" mesh="S_perno_sol" rgba="0. 0. 0. 1"  size="1"/>
+            <geom type="mesh" mesh="S_pirioli" rgba="0. 0. 0. 1" size="1"/>
+            <geom type="mesh" mesh="S_plancia" rgba="0. 0. 0. 1" size="1"/>
+            <geom type="mesh" mesh="S_ponte" rgba="0.8 0.8 0.8 1" size="1"/>
+            <geom type="mesh" mesh="S_ponticello" rgba="0. 0. 0. 1" size="1"/>
+            <geom type="mesh" mesh="S_reggicinghia" rgba="0. 0. 0. 1" size="1"/>
+            <geom type="mesh" mesh="S_reggiponte" rgba="0.1 0.1 0.1 1" size="1"/>
+            <geom type="mesh" mesh="S_vite_reggicinghia" rgba="0. 0. 0. 1" size="1"/>
+            <geom type="mesh" mesh="cordas"  size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_001" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_002" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_003" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_004" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_005" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_006" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_007" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_008" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_009" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_010" size="1" material="white"/>
+            <geom type="mesh" mesh="cordas_011" size="1" material="white"/>
+        </body>
+    </worldbody>
+</mujoco>

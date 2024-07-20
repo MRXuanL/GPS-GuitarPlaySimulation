@@ -1,0 +1,12 @@
+# Blender 3.6.5 MTL File: 'test-chitarra-13-materiali-posata_orizzontale-alt_shot-bake-03.blend'
+# www.blender.org
+
+newmtl capotasto_e_ponticelli
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 0.950385 0.719099
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
