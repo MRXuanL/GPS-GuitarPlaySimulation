@@ -3,14 +3,6 @@
 A guitar play simulation system capable of reading tablature and, after training, guiding robotic hands to play the guitar.
 Our system works best with Linux OS because JAX has some bugs on Windows OS. For example, when training on Windows OS, it may not use the GPU for training. Implementing the DroQ algorithm using PyTorch could potentially solve this issue.
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-
 ## Installation
 
 1. Clone the repository:
@@ -44,4 +36,35 @@ Our system works best with Linux OS because JAX has some bugs on Windows OS. For
     conda install jax -c conda-forge  
     conda install jaxlib=*=*cuda* jax cuda-nvcc -c conda-forge -c nvidia  
     ```
+
+## Usage
+
+1. Find the `GPS-GuitarPlaySimulation/guitarplay/train_guitar.py` file.
+2. Find the `main` function. If you want to train the model, you can use the `train` function for training and disable the `test` function.
+3. You can modify the `args` array to change the parameters for training.
+4. You can also change the value of `arg.table` to select another song for training.
+5. Song IDs are listed in `GPS-GuitarPlaySimulation/tasklist.txt`.
+6. Finally, run the command to train the model:
+   ```sh
+    python train_guitar.py
+   ```
+7. After training, you can use the test function to test the model and disable the train function. Note that you should keep the args in the train and test functions the same!
+8. After testing, you can find a video of your trained song.
+
+
+## Add a new song
+If you know how to use Guitar Pro software, you can get a tablature from Guitar Pro software in MusicXml format. Then, using MusicXmltoTarget: https://github.com/MRXuanL/MusicXmltoTarget, translate the MusicXml file to our target format.
+
+This will generate a new out.txt file. Please copy it to our project, replacing the original out.txt file.
+
+Then you need to train/test any song to update the tasklist.txt file for training. Please find the new song ID from the tasklist.txt for training.
+
+
+
+
+
+
+
+
+
 
