@@ -53,7 +53,7 @@ Our system works best with Linux OS because JAX has some bugs on Windows OS. For
 
 
 ## Add a new song
-If you know how to use Guitar Pro software, you can get a tablature from Guitar Pro software in MusicXml format. Then, using MusicXmltoTarget: https://github.com/MRXuanL/MusicXmltoTarget, translate the MusicXml file to our target format.
+If you know how to use Guitar Pro software, you can get a tablature from Guitar Pro software in MusicXml format. Then, using [MusicXmltoTarget](https://github.com/MRXuanL/MusicXmltoTarget), translate the MusicXml file to our target format.
 
 This will generate a new `out.txt` file. Please copy it to our project, replacing the original `out.txt` file.
 
