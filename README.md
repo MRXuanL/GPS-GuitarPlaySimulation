@@ -48,16 +48,25 @@ Our system works best with Linux OS because JAX has some bugs on Windows OS. For
    ```sh
     python train_guitar.py
    ```
-7. After training, you can use the test function to test the model and disable the train function. Note that you should keep the args in the train and test functions the same!
+7. After training, you can use the test function to `test` the model and disable the `train` function. Note that you should keep the args in the `train` and `test` functions the same!
 8. After testing, you can find a video of your trained song.
 
 
 ## Add a new song
 If you know how to use Guitar Pro software, you can get a tablature from Guitar Pro software in MusicXml format. Then, using MusicXmltoTarget: https://github.com/MRXuanL/MusicXmltoTarget, translate the MusicXml file to our target format.
 
-This will generate a new out.txt file. Please copy it to our project, replacing the original out.txt file.
+This will generate a new `out.txt` file. Please copy it to our project, replacing the original `out.txt` file.
 
-Then you need to train/test any song to update the tasklist.txt file for training. Please find the new song ID from the tasklist.txt for training.
+Then you need to train/test any song to update the `tasklist.txt` file for training. Please find the new song ID from the `tasklist.txt` for training.
+
+## See the result log
+After training, you will find a new folder named result, which contains the best model and F1 score, recall, and precision metrics. You can run the command to see the metrics on the website:
+```sh
+tensorboard --logdir result
+```
+
+## Questions
+Please feel free to ask me any questions about this project!
 
 
 
