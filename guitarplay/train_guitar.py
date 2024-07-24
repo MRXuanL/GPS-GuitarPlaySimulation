@@ -1,5 +1,5 @@
 import sys
-# sys.path.append('/home/lcy/guitarplayerlast') #add your project path where contains guitarplay filefolder
+# sys.path.append('/home/lcy/GPS-GuitarPlaySimulation') #add your project path where contains guitarplay filefolder
 # import guitarplay.envs.guitar_gym_env
 # env=guitarplay.envs.guitar_gym_env.GuitarPlayEnv()
 import example
