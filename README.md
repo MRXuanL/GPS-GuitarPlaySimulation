@@ -59,7 +59,7 @@ This will generate a new `out.txt` file. Please copy it to our project, replacin
 
 Then you need to train/test any song to update the `tasklist.txt` file for training. Please find the new song ID from the `tasklist.txt` for training.
 
-## See the result log
+## Check the result log
 After training, you will find a new folder named result, which contains the best model and F1 score, recall, and precision metrics. You can run the command to see the metrics on the website:
 ```sh
 tensorboard --logdir result
