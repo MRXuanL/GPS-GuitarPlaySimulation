@@ -48,7 +48,7 @@ Our system works best with Linux OS because JAX has some bugs on Windows OS. For
    ```sh
     python train_guitar.py
    ```
-7. After training, you can use the test function to `test` the model and disable the `train` function. Note that you should keep the args in the `train` and `test` functions the same!
+7. After training, you can use the `test` function to test the model and disable the `train` function. Note that you should keep the args in the `train` and `test` functions the same!
 8. After completing the testing, you can find the video of your trained song in the `~/dm_env_wrappers` directory.
 
 
