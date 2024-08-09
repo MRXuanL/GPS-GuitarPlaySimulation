@@ -2,7 +2,7 @@
 
 A guitar play simulation system capable of reading tablature and, after training, guiding robotic hands to play the guitar.
 Our system works best with Linux OS because JAX has some bugs on Windows OS. For example, when training on Windows OS, it may not use the GPU for training. Implementing the DroQ algorithm using PyTorch could potentially solve this issue.
-
+[[Project Page]](https://mrxuanl.github.io/publications/guitarplayer.html)
 ## Installation
 
 1. Clone the repository:
