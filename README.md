@@ -69,7 +69,20 @@ tensorboard --logdir result
 Please feel free to ask me any questions about this project!
 
 
+## BibTeX
+```sh
 
+@article{10.1111:cgf.15166,
+journal = {Computer Graphics Forum},
+title = {{Learning to Play Guitar with Robotic Hands}},
+author = {Luo, Chaoyi and Tang, Pengbin and Ma, Yuqi and Huang, Dongjin},
+year = {2024},
+publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
+ISSN = {1467-8659},
+DOI = {10.1111/cgf.15166}
+}
+        
+```
 
 
 
