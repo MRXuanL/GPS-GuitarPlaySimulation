@@ -34,7 +34,8 @@ Our system works best with Linux OS because JAX has some bugs on Windows OS. For
     pip install mujoco_utils  
     pip install tensorboard  
     conda install jax -c conda-forge  
-    conda install jaxlib=*=*cuda* jax cuda-nvcc -c conda-forge -c nvidia  
+    conda install jaxlib=*=*cuda* jax cuda-nvcc -c conda-forge -c nvidia
+    pip install dm_env_wrappers
     ```
 
 ## Usage
