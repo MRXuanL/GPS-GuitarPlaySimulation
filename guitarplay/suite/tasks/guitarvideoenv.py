@@ -66,34 +66,34 @@ class GuitarSoundVideoWrapper(DmControlVideoWrapper):
 
         # Add the sound to the MP4 using FFMPEG, suppressing the output.
         # Reference: https://stackoverflow.com/a/11783474
-        # ret = subprocess.run(
-        #     [
-        #         "ffmpeg",
-        #         "-nostdin",
-        #         "-y",
-        #         "-i",
-        #         str(temp_filename),
-        #         "-i",
-        #         str(waveform_name),
-        #         "-map",
-        #         "0",
-        #         "-map",
-        #         "1:a",
-        #         "-c:v",
-        #         "copy",
-        #         "-shortest",
-        #         str(filename),
-        #     ],
-        #     stdout=subprocess.DEVNULL,
-        #     stderr=subprocess.STDOUT,
-        #     check=True,
-        # )
-        # if ret.returncode != 0:
-        #     print(f"FFMPEG failed to add sound to video {temp_filename}.")
+        ret = subprocess.run(
+            [
+                "ffmpeg",
+                "-nostdin",
+                "-y",
+                "-i",
+                str(temp_filename),
+                "-i",
+                str(waveform_name),
+                "-map",
+                "0",
+                "-map",
+                "1:a",
+                "-c:v",
+                "copy",
+                "-shortest",
+                str(filename),
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.STDOUT,
+            check=True,
+        )
+        if ret.returncode != 0:
+            print(f"FFMPEG failed to add sound to video {temp_filename}.")
 
-        # # Remove temporary files.
-        # temp_filename.unlink()
-        # waveform_name.unlink()
+        # Remove temporary files.
+        temp_filename.unlink()
+        waveform_name.unlink()
 
     def _render_frame(self, observation) -> np.ndarray:
         del observation  # Unused.
