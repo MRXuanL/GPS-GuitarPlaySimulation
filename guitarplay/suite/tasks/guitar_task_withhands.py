@@ -349,6 +349,8 @@ class GuitarTaskWithHands(GuitarBasicTask):
                 
         #空弦列表
         stringpos0=[]
+        stringpluck=[0 for i in range(6)]
+
         #手指拨动时按照轨迹移动，否则保持原型
         for i in range(4):
             if self._fingerstate[i]!=-1:
@@ -361,6 +363,7 @@ class GuitarTaskWithHands(GuitarBasicTask):
                 if wait==0:
                     if self._finger_tick_id[i]==_ANIMATION_NUM:
                         self._string_play(self._fingerstring[i]-1)
+                        stringpluck[self._fingerstring[i]-1]=1
                 if wait==1:
                 #在10个tick内 如果有一个tick达到了目标 就弹奏，否则在最后一个tick演奏
                     if self._fingerstate[i]==self._string_max_pos[self._fingerstring[i]-1]:
@@ -394,6 +397,7 @@ class GuitarTaskWithHands(GuitarBasicTask):
                         self._fingerstate[i]=-1
                     
         physics.bind(self._fingers_joint[4]).qpos=self._last_finger_qpos[4]
+        self._stringpluck=stringpluck
     
 
     def _compute_fingering_reward(self, physics: mjcf.Physics) -> float:
@@ -536,6 +540,7 @@ class GuitarTaskWithHands(GuitarBasicTask):
     def _reset_quantities_at_episode_init(self,physics: mjcf.Physics=None) -> None:
         
         self._last_action=np.zeros(len(self.left_hand.actuators))
+        self._stringpluck=[0 for i in range(6)]
         self._last_reward=0
         self._tick_id:int=0
         self._should_terminate=False
@@ -721,8 +726,8 @@ class GuitarTaskWithHands(GuitarBasicTask):
     
         ]
         #将手的joints_pos观察变量开启
-        # for hand in [self.right_hand, self.left_hand]:
-        for hand in [self.left_hand]:
+        for hand in [self.right_hand, self.left_hand]:
+        # for hand in [self.left_hand]:
             for obs in enabled_observables:
                 getattr(hand.observables, obs).enabled = True
 
@@ -786,6 +791,9 @@ class GuitarTaskWithHands(GuitarBasicTask):
             
             return np.concatenate([action,reward])
         
+        def _get_pluck_state(physics)-> np.ndarray:
+            stringpluck=np.array(self._stringpluck)
+            return stringpluck
         def _get_f1_score(physics) -> np.ndarray:
             self._update_goal_state()
             f1=self.compute_F1_score()
@@ -798,6 +806,10 @@ class GuitarTaskWithHands(GuitarBasicTask):
             k_reward=self._rightKey_weight*self._compute_key_press_reward(physics)
             self._last_reward=f_reward+e_reward+k_reward
             return np.array([f_reward,e_reward,k_reward])
+        
+        def _get_task_qpos(physics) -> np.ndarray:
+            return np.array(physics.data.qpos)
+            
         reward_observable=observable.Generic(_get_reward)
         reward_observable.enabled=True
         f1_state_observable=observable.Generic(_get_f1_score)
@@ -806,16 +818,15 @@ class GuitarTaskWithHands(GuitarBasicTask):
         last_state_observable.enabled=True
         goal_observable = observable.Generic(_get_goal_state)
         goal_observable.enabled = True
-        
+        string_pluck_observable=observable.Generic(_get_pluck_state)
+        string_pluck_observable.enabled = True
+        task_qpos=observable.Generic(_get_task_qpos)
+        task_qpos.enabled=True
         self._task_observables = {
             "f1": f1_state_observable,
             "goal": goal_observable,
             "last_state": last_state_observable,
-            "reward": reward_observable
-            }
-        
-
-
-    
-    
-    
+            "reward": reward_observable,
+            "pluck": string_pluck_observable,
+            "qpos": task_qpos
+        }

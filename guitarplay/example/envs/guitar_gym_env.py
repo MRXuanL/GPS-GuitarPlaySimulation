@@ -12,6 +12,7 @@ from dm_control import composer
 from guitarplay.music.tablature import Tablature as tb
 
 checkaction=[0,1,2,-3,-2,-1]
+handpos=['qpos','state','pluck']
 sequece=['goal','last_state',
          'state',
         #  'lh_shadow_hand/position',
@@ -102,6 +103,7 @@ class GuitarPlayEnv(gym.Env):
         self.ac_center=(self.DMCac_spc.minimum+self.DMCac_spc.maximum)/2
         self.ac_power=(self.DMCac_spc.maximum-self.DMCac_spc.minimum)/2
         self.init_buffer_step=int(init_buffer_time/_CONTROL_TIMESTEP)
+        self.test=test
         self.f1s=[]
         self.rewards=[]
         self.max_vel=-1
@@ -110,6 +112,7 @@ class GuitarPlayEnv(gym.Env):
         self.flag=1
         self.normalization=normalization
         ob_shape=0
+        self.npybuffer=[]
         for i in range(len(sequece)):
             ob_shape+=self.DMCob_spc[sequece[i]].shape[1]
             
@@ -117,6 +120,14 @@ class GuitarPlayEnv(gym.Env):
         
         self.action_space=spaces.Box(low=-1,high=1,shape=self.DMCac_spc.shape,dtype=np.float64)
         self.render_mode=render_mode
+
+    def _get_pos(self,timestep):
+        obs=np.array([])
+        for name in handpos:
+            obs_part=timestep.observation[name]
+            obs_part=obs_part.flatten()
+            obs=np.concatenate((obs,obs_part))
+        return obs
     def _get_obs(self,timestep):
         obs=np.array([])
         for name in sequece:
@@ -161,9 +172,13 @@ class GuitarPlayEnv(gym.Env):
         reward=timestep.reward
         terminated=timestep.last()
         observation=self._get_obs(timestep)
+        if(self.test==1):
+            self.npybuffer.append(self._get_pos(timestep))
+            # self.npybuffer.append(np.concatenate((rescaleAction,self._get_handpos(timestep))))
         info=self._get_info(timestep)
         self.f1s.append(info['f1'])
         self.rewards.append(info['reward'])
+
         if terminated:
             f1s=np.array(self.f1s)[self.init_buffer_step:,:]
             rewards=np.array(self.rewards)[self.init_buffer_step:,:]
@@ -173,6 +188,12 @@ class GuitarPlayEnv(gym.Env):
             fp=case[1]
             fn=case[2]
             precision,recall,F1=self.compute_f1(tp,fp,fn)
+            if(self.test==1): 
+                with open('./action.txt','w') as f:
+                    for action in self.npybuffer:
+                        f.write(str(action)+'\n')
+                np.save('./npybuffer.npy',np.array(self.npybuffer))
+                self.npybuffer=[]
             info={'f1':F1,'precision':precision,'recall':recall,'reward':rewards}
             
         return observation, reward, terminated, False, info

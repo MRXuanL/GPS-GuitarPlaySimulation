@@ -1,0 +1,1196 @@
+<mujoco model="imported_obj">
+  <compiler autolimits="true" angle="radian"/>
+  <option timestep="0.0033333333333333331" impratio="10"/>
+  <visual>
+    <global offwidth="1920" offheight="1080"/>
+    <quality shadowsize="2048"/>
+    <headlight ambient="0.5 0.5 0.5" diffuse="0.29999999999999999 0.29999999999999999 0.29999999999999999" specular="0.10000000000000001 0.10000000000000001 0.10000000000000001"/>
+    <map znear="0.01"/>
+  </visual>
+  <default>
+    <default class="/">
+      <geom solref="0.0066666666666666662 1"/>
+    </default>
+    <default class="rh_shadow_hand/">
+      <default class="rh_shadow_hand/right_hand">
+        <mesh scale="0.001 0.001 0.001"/>
+        <joint axis="1 0 0" armature="0.00020000000000000001" damping="0.050000000000000003" frictionloss="0.01"/>
+        <position forcerange="-1 1"/>
+        <default class="rh_shadow_hand/wrist">
+          <joint damping="0.5"/>
+          <default class="rh_shadow_hand/wrist_y">
+            <joint axis="0 1 0" range="-0.52359900000000004 0.17453299999999999"/>
+            <position ctrlrange="-0.52359900000000004 0.17453299999999999" forcerange="-10 10" kp="10"/>
+          </default>
+          <default class="rh_shadow_hand/wrist_x">
+            <joint range="-0.69813199999999997 0.48869200000000002"/>
+            <position ctrlrange="-0.69813199999999997 0.48869200000000002" forcerange="-5 5" kp="8"/>
+          </default>
+        </default>
+        <default class="rh_shadow_hand/thumb">
+          <default class="rh_shadow_hand/thbase">
+            <joint axis="0 0 -1" range="-1.0471999999999999 1.0471999999999999"/>
+            <position ctrlrange="-1.0471999999999999 1.0471999999999999" forcerange="-3 3" kp="0.40000000000000002"/>
+          </default>
+          <default class="rh_shadow_hand/thbase1">
+            <joint axis="0 1 0" range="-2.0472000000000001 2.0472000000000001"/>
+            <position ctrlrange="-1.0471999999999999 1.0471999999999999" forcerange="-3 3" kp="0.40000000000000002"/>
+          </default>
+          <default class="rh_shadow_hand/thproximal">
+            <joint range="0 1.22173"/>
+            <position ctrlrange="0 1.22173" forcerange="-2 2"/>
+          </default>
+          <default class="rh_shadow_hand/thhub">
+            <joint range="-0.20943999999999999 0.20943999999999999"/>
+            <position ctrlrange="-0.20943999999999999 0.20943999999999999" kp="0.5"/>
+          </default>
+          <default class="rh_shadow_hand/thmiddle">
+            <joint axis="0 -1 0" range="-0.69813199999999997 0.69813199999999997"/>
+            <position ctrlrange="-0.69813199999999997 0.69813199999999997" kp="1.5"/>
+          </default>
+          <default class="rh_shadow_hand/thdistal">
+            <joint range="-0.261799 1.5708"/>
+            <position ctrlrange="-0.261799 1.5708"/>
+          </default>
+        </default>
+        <default class="rh_shadow_hand/metacarpal">
+          <joint axis="0.57357599999999997 0 0.81915199999999999" range="0 0.78539800000000004"/>
+          <position ctrlrange="0 0.78539800000000004"/>
+        </default>
+        <default class="rh_shadow_hand/knuckle">
+          <joint axis="0 -1 0" range="-0.34906599999999999 0.34906599999999999"/>
+          <position ctrlrange="-0.34906599999999999 0.34906599999999999"/>
+        </default>
+        <default class="rh_shadow_hand/proximal">
+          <joint range="-0.261799 1.5708"/>
+          <position ctrlrange="-0.261799 1.5708"/>
+        </default>
+        <default class="rh_shadow_hand/middle_distal">
+          <joint range="0 1.5708"/>
+          <position ctrlrange="0 3.1415000000000002" kp="0.5"/>
+        </default>
+        <default class="rh_shadow_hand/plastic">
+          <geom solref="0.0050000000000000001 1" solimp="0.5 0.98999999999999999 0.0001"/>
+          <default class="rh_shadow_hand/plastic_visual">
+            <geom type="mesh" contype="0" conaffinity="0" group="2" material="rh_shadow_hand/black"/>
+          </default>
+          <default class="rh_shadow_hand/plastic_collision">
+            <geom group="3"/>
+          </default>
+        </default>
+      </default>
+    </default>
+    <default class="lh_shadow_hand/">
+      <default class="lh_shadow_hand/left_hand">
+        <mesh scale="0.001 0.001 0.001"/>
+        <joint axis="1 0 0" armature="0.00020000000000000001" damping="0.050000000000000003" frictionloss="0.01"/>
+        <position forcerange="-1 1"/>
+        <default class="lh_shadow_hand/wrist">
+          <joint damping="0.5"/>
+          <default class="lh_shadow_hand/wrist_y">
+            <joint axis="0 -1 0" range="-0.52359900000000004 0.17453299999999999"/>
+            <position ctrlrange="-0.52359900000000004 0.17453299999999999" forcerange="-10 10" kp="10"/>
+          </default>
+          <default class="lh_shadow_hand/wrist_x">
+            <joint range="-0.69813199999999997 0.78869199999999995"/>
+            <position ctrlrange="-0.69813199999999997 0.78869199999999995" forcerange="-5 5" kp="8"/>
+          </default>
+        </default>
+        <default class="lh_shadow_hand/thumb">
+          <default class="lh_shadow_hand/thbase">
+            <joint axis="0 0 1" range="-1.0471999999999999 1.0471999999999999"/>
+            <position ctrlrange="-1.0471999999999999 1.0471999999999999" forcerange="-3 3" kp="0.40000000000000002"/>
+          </default>
+          <default class="lh_shadow_hand/thproximal">
+            <joint axis="-1 0 0" range="0 1.22173"/>
+            <position ctrlrange="0 1.22173" forcerange="-2 2"/>
+          </default>
+          <default class="lh_shadow_hand/thhub">
+            <joint axis="-1 0 0" range="-0.20943999999999999 0.20943999999999999"/>
+            <position ctrlrange="-0.20943999999999999 0.20943999999999999" kp="0.5"/>
+          </default>
+          <default class="lh_shadow_hand/thmiddle">
+            <joint axis="0 -1 0" range="-0.69813199999999997 0.69813199999999997"/>
+            <position ctrlrange="-0.69813199999999997 0.69813199999999997" kp="1.5"/>
+          </default>
+          <default class="lh_shadow_hand/thdistal">
+            <joint range="-0.261799 1.5708"/>
+            <position ctrlrange="-0.261799 1.5708"/>
+          </default>
+        </default>
+        <default class="lh_shadow_hand/metacarpal">
+          <joint axis="0.57357599999999997 0 0.81915199999999999" range="0 0.78539800000000004"/>
+          <position ctrlrange="0 0.78539800000000004"/>
+        </default>
+        <default class="lh_shadow_hand/knuckle">
+          <joint axis="0 -1 0" range="-0.34906599999999999 0.34906599999999999"/>
+          <position ctrlrange="-0.34906599999999999 0.34906599999999999"/>
+        </default>
+        <default class="lh_shadow_hand/proximal">
+          <joint range="-0.261799 1.5708"/>
+          <position ctrlrange="-0.261799 1.5708"/>
+        </default>
+        <default class="lh_shadow_hand/middle_distal">
+          <joint range="0 1.5708"/>
+          <position ctrlrange="0 3.1415000000000002" kp="0.5"/>
+        </default>
+        <default class="lh_shadow_hand/plastic">
+          <geom solref="0.0050000000000000001 1" solimp="0.5 0.98999999999999999 0.0001"/>
+          <default class="lh_shadow_hand/plastic_visual">
+            <geom type="mesh" contype="0" conaffinity="0" group="2" material="lh_shadow_hand/black"/>
+          </default>
+          <default class="lh_shadow_hand/plastic_collision">
+            <geom group="3"/>
+          </default>
+        </default>
+      </default>
+    </default>
+  </default>
+  <asset>
+    <material name="white" class="/" specular="0.59999999999999998" shininess="0.5" rgba="0.75290000000000001 0.75290000000000001 0.7843 1"/>
+    <material name="black" class="/" specular="0.5" shininess="0.25" rgba="0.16355 0.16355 0.16355 1"/>
+    <material name="gray" class="/" specular="0" shininess="0.25" rgba="0.80847999999999998 0.80847999999999998 0.80847999999999998 1"/>
+    <material name="metallic" class="/" specular="0" shininess="0.25" rgba="0.90000000000000002 0.90000000000000002 0.90000000000000002 1"/>
+    <mesh name="S_Circle_031" class="/" file="S_Circle_031-4947ab654413a9da8ef7a4e4c7ecbe20df19cec9.obj"/>
+    <mesh name="S_Plane1" class="/" file="S_Plane1-4f9094b5bb01e1b7650f9de796c3ff00b769d35a.obj"/>
+    <mesh name="S_Plane2" class="/" file="S_Plane2-1c6899b5214a652421ead5ede89dd26d99cc7ff0.obj"/>
+    <mesh name="cassa" class="/" file="cassa-3e13a7e8ba1f033323a244a521fef0424f0f27a7.obj"/>
+    <mesh name="cassa_001" class="/" file="cassa_001-64fc04b8f91f58a4245b70f7a4708c290b004e23.obj"/>
+    <mesh name="S_chiave_la" class="/" file="S_chiave_la-2df10f4bf5039d806accdc00c0f6d19ba09d7a0a.obj"/>
+    <mesh name="S_ghiera_la_e_si" class="/" file="S_ghiera_la_e_si-b3e37e8bd77e6bfcf1ed8e7a46377e0c9af78621.obj"/>
+    <mesh name="S_jack" class="/" file="S_jack-a1c24f950fd551f37ab43c15e335ab5243d66042.obj"/>
+    <mesh name="S_manico" class="/" file="S_manico-95484acc577fb5677ab24066cc92fe5980604cf6.obj"/>
+    <mesh name="S_manico1" class="/" file="S_manico1-e46313d57c07f0fb380fb1b055445b8bed2c03b9.obj"/>
+    <mesh name="S_manico2" class="/" file="S_manico2-c69bd7db044569b1eaf1584ff2190acec30ca6cd.obj"/>
+    <mesh name="S_perno_sol" class="/" file="S_perno_sol-83b124e1bf7e290ce541b0e16382df779dbf5aab.obj"/>
+    <mesh name="S_pirioli" class="/" file="S_pirioli-8d19835b9f839b83db1b88b69911c887ca437db3.obj"/>
+    <mesh name="S_plancia" class="/" file="S_plancia-4ec80e0aeaa01ed277d2dd25ffea6a0908f57797.obj"/>
+    <mesh name="S_ponte" class="/" file="S_ponte-5a1f94048515787d1cdc44d455aa21e2e189def9.obj"/>
+    <mesh name="S_ponticello" class="/" file="S_ponticello-4917b49376956ff03fe2190eacaca7a64042c0ed.obj"/>
+    <mesh name="S_reggicinghia" class="/" file="S_reggicinghia-a6fe05d06e0131e3c80c2ec4d5404ba804043916.obj"/>
+    <mesh name="S_reggiponte" class="/" file="S_reggiponte-b67ac8c1b871672f1b613cb2669f2478e31e56e9.obj"/>
+    <mesh name="S_vite_reggicinghia" class="/" file="S_vite_reggicinghia-f187041e6a07fb8cb4ed0e47a74d732e557faa21.obj"/>
+    <mesh name="cordas" class="/" file="cordas-6c16941ee203a3208fe69feea517d286a614d025.obj"/>
+    <mesh name="cordas_001" class="/" file="cordas_001-334fd85d1ad2fdd3f4d6e687f6f338ad09ca4f0d.obj"/>
+    <mesh name="cordas_002" class="/" file="cordas_002-11a7c12cee07fe1b6346a6d273fa5cad1ab8ffec.obj"/>
+    <mesh name="cordas_003" class="/" file="cordas_003-37899c4d77de907730f47b708883c790140b8834.obj"/>
+    <mesh name="cordas_004" class="/" file="cordas_004-799a0764c0d2597301306ec2c01ec12fa2c16d70.obj"/>
+    <mesh name="cordas_005" class="/" file="cordas_005-1ee18191e636fc5cb26ce60a357dedd7eda39700.obj"/>
+    <mesh name="cordas_006" class="/" file="cordas_006-afc289ff3c4a66fc76b9d373affa9a03992332d0.obj"/>
+    <mesh name="cordas_007" class="/" file="cordas_007-3e86e789d6be922a0841db0df4e987183928b877.obj"/>
+    <mesh name="cordas_008" class="/" file="cordas_008-f59f8fcd957dd82c8db57326398b87171e61dc85.obj"/>
+    <mesh name="cordas_009" class="/" file="cordas_009-c060abace60b17b6a17fe3af5da79e857743fdec.obj"/>
+    <mesh name="cordas_010" class="/" file="cordas_010-6ed511d49dd49f9686837ce91101373bc5216a90.obj"/>
+    <mesh name="cordas_011" class="/" file="cordas_011-d1a991a25853966819f95050eaee4326f1e18a1d.obj"/>
+    <texture name="skybox" type="skybox" builtin="gradient" rgb1="0.40000000000000002 0.59999999999999998 0.80000000000000004" rgb2="0.69999999999999996 0.69999999999999996 0.69999999999999996" mark="random" markrgb="1 1 1" width="800" height="800"/>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.57999999999999996 0 0.82699999999999996" rgb2="0 0.39200000000000002 0" mark="edge" markrgb="0 0.39200000000000002 0" width="300" height="300"/>
+    <material name="grid" class="/" texture="grid" texrepeat="1 1" texuniform="true" reflectance="0.20000000000000001"/>
+    <material name="self" class="/" rgba="0.69999999999999996 0.5 0.29999999999999999 1"/>
+    <material name="self_default" class="/" rgba="0.69999999999999996 0.5 0.29999999999999999 1"/>
+    <material name="self_highlight" class="/" rgba="0 0.5 0.29999999999999999 1"/>
+    <material name="effector" class="/" rgba="0.69999999999999996 0.40000000000000002 0.20000000000000001 1"/>
+    <material name="effector_default" class="/" rgba="0.69999999999999996 0.40000000000000002 0.20000000000000001 1"/>
+    <material name="effector_highlight" class="/" rgba="0 0.5 0.29999999999999999 1"/>
+    <material name="decoration" class="/" rgba="0.29999999999999999 0.5 0.69999999999999996 1"/>
+    <material name="eye" class="/" rgba="0 0.20000000000000001 1 1"/>
+    <material name="target" class="/" rgba="0.59999999999999998 0.29999999999999999 0.29999999999999999 1"/>
+    <material name="target_default" class="/" rgba="0.59999999999999998 0.29999999999999999 0.29999999999999999 1"/>
+    <material name="target_highlight" class="/" rgba="0.59999999999999998 0.29999999999999999 0.29999999999999999 0.40000000000000002"/>
+    <material name="site" class="/" rgba="0.5 0.5 0.5 0.29999999999999999"/>
+    <material name="rh_shadow_hand/black" class="rh_shadow_hand/" specular="0.5" shininess="0.25" rgba="0.16355 0.16355 0.16355 1"/>
+    <material name="rh_shadow_hand/gray" class="rh_shadow_hand/" specular="0" shininess="0.25" rgba="0.80847999999999998 0.80847999999999998 0.80847999999999998 1"/>
+    <material name="rh_shadow_hand/metallic" class="rh_shadow_hand/" specular="0" shininess="0.25" rgba="0.90000000000000002 0.90000000000000002 0.90000000000000002 1"/>
+    <mesh name="rh_shadow_hand/forearm_0" class="rh_shadow_hand/right_hand" file="forearm_0-20abf0e17ef9afc17a625f75fc0ad21f31b2ff9a.obj"/>
+    <mesh name="rh_shadow_hand/forearm_1" class="rh_shadow_hand/right_hand" file="forearm_1-f5b8ac92a6e1b0a6b27c50dac2004867e6c0fb5b.obj"/>
+    <mesh name="rh_shadow_hand/forearm_collision" class="rh_shadow_hand/right_hand" file="forearm_collision-3ef43cdb2273599be12fc3270639b8782c869cb4.obj"/>
+    <mesh name="rh_shadow_hand/wrist" class="rh_shadow_hand/right_hand" file="wrist-87545134a753f219a1f55310cc200489b3a03c47.obj"/>
+    <mesh name="rh_shadow_hand/palm" class="rh_shadow_hand/right_hand" file="palm-20de86ceb3b063e7ca1bf25fa6ddd07c068d6a70.obj"/>
+    <mesh name="rh_shadow_hand/f_knuckle" class="rh_shadow_hand/right_hand" file="f_knuckle-4e74747ced8908917157e00df691de5cfc71808c.obj"/>
+    <mesh name="rh_shadow_hand/f_proximal" class="rh_shadow_hand/right_hand" file="f_proximal-2b944834ac12ce9bb152073bce3db339405bc76d.obj"/>
+    <mesh name="rh_shadow_hand/f_middle" class="rh_shadow_hand/right_hand" file="f_middle-c817011a5fccb8dac0f3201f10aa30ffa74db8b6.obj"/>
+    <mesh name="rh_shadow_hand/f_distal_pst" class="rh_shadow_hand/right_hand" file="f_distal_pst-927e7e0da0ee76e69c0444b22bade45ff20ab5ee.obj"/>
+    <mesh name="rh_shadow_hand/lf_metacarpal" class="rh_shadow_hand/right_hand" file="lf_metacarpal-43a8cbd60c754686e733e10c0c28ff082b46a917.obj"/>
+    <mesh name="rh_shadow_hand/th_proximal" class="rh_shadow_hand/right_hand" file="th_proximal-836fc483b89bf08806ab50636ab1fe738a54406e.obj"/>
+    <mesh name="rh_shadow_hand/th_middle" class="rh_shadow_hand/right_hand" file="th_middle-c6937ecc6bf6b01a854aaffb71f3beeda05f8ac3.obj"/>
+    <mesh name="rh_shadow_hand/th_distal_pst" class="rh_shadow_hand/right_hand" file="th_distal_pst-c003d5be2d6a841babda3d88c51010617a2ba4bb.obj"/>
+    <material name="lh_shadow_hand/black" class="lh_shadow_hand/" specular="0.5" shininess="0.25" rgba="0.16355 0.16355 0.16355 1"/>
+    <material name="lh_shadow_hand/gray" class="lh_shadow_hand/" specular="0" shininess="0.25" rgba="0.80847999999999998 0.80847999999999998 0.80847999999999998 1"/>
+    <material name="lh_shadow_hand/metallic" class="lh_shadow_hand/" specular="0" shininess="0.25" rgba="0.90000000000000002 0.90000000000000002 0.90000000000000002 1"/>
+    <mesh name="lh_shadow_hand/forearm_0" class="lh_shadow_hand/left_hand" file="forearm_0-20abf0e17ef9afc17a625f75fc0ad21f31b2ff9a.obj"/>
+    <mesh name="lh_shadow_hand/forearm_1" class="lh_shadow_hand/left_hand" file="forearm_1-f5b8ac92a6e1b0a6b27c50dac2004867e6c0fb5b.obj"/>
+    <mesh name="lh_shadow_hand/forearm_collision" class="lh_shadow_hand/left_hand" file="forearm_collision-3ef43cdb2273599be12fc3270639b8782c869cb4.obj"/>
+    <mesh name="lh_shadow_hand/wrist" class="lh_shadow_hand/left_hand" file="wrist-87545134a753f219a1f55310cc200489b3a03c47.obj" scale="-0.001 0.001 0.001"/>
+    <mesh name="lh_shadow_hand/palm" class="lh_shadow_hand/left_hand" file="palm-20de86ceb3b063e7ca1bf25fa6ddd07c068d6a70.obj" scale="-0.001 0.001 0.001"/>
+    <mesh name="lh_shadow_hand/f_knuckle" class="lh_shadow_hand/left_hand" file="f_knuckle-4e74747ced8908917157e00df691de5cfc71808c.obj"/>
+    <mesh name="lh_shadow_hand/f_proximal" class="lh_shadow_hand/left_hand" file="f_proximal-2b944834ac12ce9bb152073bce3db339405bc76d.obj"/>
+    <mesh name="lh_shadow_hand/f_middle" class="lh_shadow_hand/left_hand" file="f_middle-c817011a5fccb8dac0f3201f10aa30ffa74db8b6.obj"/>
+    <mesh name="lh_shadow_hand/f_distal_pst" class="lh_shadow_hand/left_hand" file="f_distal_pst-927e7e0da0ee76e69c0444b22bade45ff20ab5ee.obj"/>
+    <mesh name="lh_shadow_hand/lf_metacarpal" class="lh_shadow_hand/left_hand" file="lf_metacarpal-43a8cbd60c754686e733e10c0c28ff082b46a917.obj" scale="-0.001 0.001 0.001"/>
+    <mesh name="lh_shadow_hand/th_proximal" class="lh_shadow_hand/left_hand" file="th_proximal-836fc483b89bf08806ab50636ab1fe738a54406e.obj"/>
+    <mesh name="lh_shadow_hand/th_middle" class="lh_shadow_hand/left_hand" file="th_middle-c6937ecc6bf6b01a854aaffb71f3beeda05f8ac3.obj"/>
+    <mesh name="lh_shadow_hand/th_distal_pst" class="lh_shadow_hand/left_hand" file="th_distal_pst-c003d5be2d6a841babda3d88c51010617a2ba4bb.obj"/>
+  </asset>
+  <worldbody>
+    <light name="light1" class="/" mode="trackcom" pos="0 2 0" dir="0 -1 0.65000000000000002" diffuse="0.59999999999999998 0.59999999999999998 0.59999999999999998" specular="1 1 1"/>
+    <body name="righthand" pos="0.14999999999999999 0.02 0.68000000000000005"/>
+    <body name="lefthand" pos="-0.25 0.02 0.68000000000000005"/>
+    <site name="test6" class="/" type="sphere" rgba="1 0 0 0" size="0.0030000000000000001" pos="0.115 0.01 0.72299999999999998"/>
+    <site name="test5" class="/" type="sphere" rgba="1 0 0 0" size="0.0030000000000000001" pos="0.1275 0.01 0.71399999999999997"/>
+    <site name="test4" class="/" type="sphere" rgba="1 0 0 0" size="0.0030000000000000001" pos="0.14000000000000001 0.01 0.70499999999999996"/>
+    <site name="test3" class="/" type="sphere" rgba="1 0 0 0" size="0.0030000000000000001" pos="0.14269999999999999 0.01 0.69499999999999995"/>
+    <site name="test2" class="/" type="sphere" rgba="1 0 0 0" size="0.0030000000000000001" pos="0.16350000000000001 0.01 0.68600000000000005"/>
+    <site name="test1" class="/" type="sphere" rgba="1 0 0 0" size="0.0030000000000000001" pos="0.1837 0.01 0.67700000000000005"/>
+    <camera name="main" class="/" mode="targetbody" target="guitar" pos="0 1 1"/>
+    <body name="guitar" pos="0 0 0.69999999999999996" euler="0 1.5707500000000001 0">
+      <geom name="//unnamed_geom_0" class="/" type="mesh" size="1" material="white" rgba="0.29999999999999999 0.20000000000000001 0 1" mesh="S_Circle_031"/>
+      <geom name="//unnamed_geom_1" class="/" type="mesh" size="1" material="white" rgba="0 0 0 1" mesh="S_Plane1"/>
+      <geom name="//unnamed_geom_2" class="/" type="mesh" size="1" material="white" rgba="0.69999999999999996 0.69999999999999996 0.69999999999999996 1" mesh="S_Plane2"/>
+      <geom name="//unnamed_geom_3" class="/" type="mesh" size="1" material="white" rgba="0.29999999999999999 0.20000000000000001 0 1" mesh="cassa"/>
+      <geom name="//unnamed_geom_4" class="/" type="mesh" size="1" material="white" rgba="0.55000000000000004 0.5 0 1" mesh="cassa_001"/>
+      <geom name="//unnamed_geom_5" class="/" type="mesh" size="1" material="white" rgba="0 0 0 1" mesh="S_chiave_la"/>
+      <geom name="//unnamed_geom_6" class="/" type="mesh" size="1" material="white" rgba="0 0 0 1" mesh="S_ghiera_la_e_si"/>
+      <geom name="//unnamed_geom_7" class="/" type="mesh" size="1" material="white" rgba="0 0 0 1" mesh="S_jack"/>
+      <geom name="//unnamed_geom_8" class="/" type="mesh" size="1" material="white" rgba="0.29999999999999999 0.20000000000000001 0 1" mesh="S_manico"/>
+      <geom name="//unnamed_geom_9" class="/" type="mesh" size="1" material="white" rgba="0.29999999999999999 0.20000000000000001 0 1" mesh="S_manico1"/>
+      <geom name="//unnamed_geom_10" class="/" type="mesh" size="1" rgba="0.29999999999999999 0.20000000000000001 0 1" mesh="S_manico2"/>
+      <geom name="//unnamed_geom_11" class="/" type="mesh" size="1" rgba="0 0 0 1" mesh="S_perno_sol"/>
+      <geom name="//unnamed_geom_12" class="/" type="mesh" size="1" rgba="0 0 0 1" mesh="S_pirioli"/>
+      <geom name="//unnamed_geom_13" class="/" type="mesh" size="1" rgba="0 0 0 1" mesh="S_plancia"/>
+      <geom name="//unnamed_geom_14" class="/" type="mesh" size="1" rgba="0.80000000000000004 0.80000000000000004 0.80000000000000004 1" mesh="S_ponte"/>
+      <geom name="//unnamed_geom_15" class="/" type="mesh" size="1" rgba="0 0 0 1" mesh="S_ponticello"/>
+      <geom name="//unnamed_geom_16" class="/" type="mesh" size="1" rgba="0 0 0 1" mesh="S_reggicinghia"/>
+      <geom name="//unnamed_geom_17" class="/" type="mesh" size="1" rgba="0.10000000000000001 0.10000000000000001 0.10000000000000001 1" mesh="S_reggiponte"/>
+      <geom name="//unnamed_geom_18" class="/" type="mesh" size="1" rgba="0 0 0 1" mesh="S_vite_reggicinghia"/>
+      <geom name="//unnamed_geom_19" class="/" type="mesh" size="1" material="white" mesh="cordas"/>
+      <geom name="//unnamed_geom_20" class="/" type="mesh" size="1" material="white" mesh="cordas_001"/>
+      <geom name="//unnamed_geom_21" class="/" type="mesh" size="1" material="white" mesh="cordas_002"/>
+      <geom name="//unnamed_geom_22" class="/" type="mesh" size="1" material="white" mesh="cordas_003"/>
+      <geom name="//unnamed_geom_23" class="/" type="mesh" size="1" material="white" mesh="cordas_004"/>
+      <geom name="//unnamed_geom_24" class="/" type="mesh" size="1" material="white" mesh="cordas_005"/>
+      <geom name="//unnamed_geom_25" class="/" type="mesh" size="1" material="white" mesh="cordas_006"/>
+      <geom name="//unnamed_geom_26" class="/" type="mesh" size="1" material="white" mesh="cordas_007"/>
+      <geom name="//unnamed_geom_27" class="/" type="mesh" size="1" material="white" mesh="cordas_008"/>
+      <geom name="//unnamed_geom_28" class="/" type="mesh" size="1" material="white" mesh="cordas_009"/>
+      <geom name="//unnamed_geom_29" class="/" type="mesh" size="1" material="white" mesh="cordas_010"/>
+      <geom name="//unnamed_geom_30" class="/" type="mesh" size="1" material="white" mesh="cordas_011"/>
+      <site name="key 1 1" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.018077354260089686" pos="0.02 0.012999999999999999 -0.34016264573991034"/>
+      <site name="key 2 1" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.018077354260089686" pos="0.012 0.012999999999999999 -0.34016264573991034"/>
+      <site name="key 3 1" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.018077354260089686" pos="0.0040000000000000001 0.012999999999999999 -0.34016264573991034"/>
+      <site name="key 4 1" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.018077354260089686" pos="-0.0040000000000000001 0.012999999999999999 -0.34016264573991034"/>
+      <site name="key 5 1" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.018077354260089686" pos="-0.012 0.012999999999999999 -0.34016264573991034"/>
+      <site name="key 6 1" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.018077354260089686" pos="-0.02 0.012999999999999999 -0.34016264573991034"/>
+      <site name="key 1 2" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.017064049649098113" pos="0.02 0.012999999999999999 -0.30502124183072254"/>
+      <site name="key 2 2" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.017064049649098113" pos="0.012 0.012999999999999999 -0.30502124183072254"/>
+      <site name="key 3 2" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.017064049649098113" pos="0.0040000000000000001 0.012999999999999999 -0.30502124183072254"/>
+      <site name="key 4 2" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.017064049649098113" pos="-0.0040000000000000001 0.012999999999999999 -0.30502124183072254"/>
+      <site name="key 5 2" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.017064049649098113" pos="-0.012 0.012999999999999999 -0.30502124183072254"/>
+      <site name="key 6 2" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.017064049649098113" pos="-0.02 0.012999999999999999 -0.30502124183072254"/>
+      <site name="key 1 3" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.016107544623924452" pos="0.02 0.012999999999999999 -0.27184964755769997"/>
+      <site name="key 2 3" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.016107544623924452" pos="0.012 0.012999999999999999 -0.27184964755769997"/>
+      <site name="key 3 3" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.016107544623924452" pos="0.0040000000000000001 0.012999999999999999 -0.27184964755769997"/>
+      <site name="key 4 3" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.016107544623924452" pos="-0.0040000000000000001 0.012999999999999999 -0.27184964755769997"/>
+      <site name="key 5 3" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.016107544623924452" pos="-0.012 0.012999999999999999 -0.27184964755769997"/>
+      <site name="key 6 3" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.016107544623924452" pos="-0.02 0.012999999999999999 -0.27184964755769997"/>
+      <site name="key 1 4" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.015204655351282946" pos="0.02 0.012999999999999999 -0.24053744758249257"/>
+      <site name="key 2 4" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.015204655351282946" pos="0.012 0.012999999999999999 -0.24053744758249257"/>
+      <site name="key 3 4" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.015204655351282946" pos="0.0040000000000000001 0.012999999999999999 -0.24053744758249257"/>
+      <site name="key 4 4" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.015204655351282946" pos="-0.0040000000000000001 0.012999999999999999 -0.24053744758249257"/>
+      <site name="key 5 4" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.015204655351282946" pos="-0.012 0.012999999999999999 -0.24053744758249257"/>
+      <site name="key 6 4" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.015204655351282946" pos="-0.02 0.012999999999999999 -0.24053744758249257"/>
+      <site name="key 1 5" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.014352376463879194" pos="0.02 0.012999999999999999 -0.21098041576733043"/>
+      <site name="key 2 5" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.014352376463879194" pos="0.012 0.012999999999999999 -0.21098041576733043"/>
+      <site name="key 3 5" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.014352376463879194" pos="0.0040000000000000001 0.012999999999999999 -0.21098041576733043"/>
+      <site name="key 4 5" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.014352376463879194" pos="-0.0040000000000000001 0.012999999999999999 -0.21098041576733043"/>
+      <site name="key 5 5" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.014352376463879194" pos="-0.012 0.012999999999999999 -0.21098041576733043"/>
+      <site name="key 6 5" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.014352376463879194" pos="-0.02 0.012999999999999999 -0.21098041576733043"/>
+      <site name="key 1 6" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.013547871056711078" pos="0.02 0.012999999999999999 -0.18308016824674014"/>
+      <site name="key 2 6" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.013547871056711078" pos="0.012 0.012999999999999999 -0.18308016824674014"/>
+      <site name="key 3 6" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.013547871056711078" pos="0.0040000000000000001 0.012999999999999999 -0.18308016824674014"/>
+      <site name="key 4 6" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.013547871056711078" pos="-0.0040000000000000001 0.012999999999999999 -0.18308016824674014"/>
+      <site name="key 5 6" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.013547871056711078" pos="-0.012 0.012999999999999999 -0.18308016824674014"/>
+      <site name="key 6 6" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.013547871056711078" pos="-0.02 0.012999999999999999 -0.18308016824674014"/>
+      <site name="key 1 7" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.012788461244115167" pos="0.02 0.012999999999999999 -0.1567438359459139"/>
+      <site name="key 2 7" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.012788461244115167" pos="0.012 0.012999999999999999 -0.1567438359459139"/>
+      <site name="key 3 7" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.012788461244115167" pos="0.0040000000000000001 0.012999999999999999 -0.1567438359459139"/>
+      <site name="key 4 7" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.012788461244115167" pos="-0.0040000000000000001 0.012999999999999999 -0.1567438359459139"/>
+      <site name="key 5 7" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.012788461244115167" pos="-0.012 0.012999999999999999 -0.1567438359459139"/>
+      <site name="key 6 7" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.012788461244115167" pos="-0.02 0.012999999999999999 -0.1567438359459139"/>
+      <site name="key 1 8" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.012071619246126647" pos="0.02 0.012999999999999999 -0.1318837554556721"/>
+      <site name="key 2 8" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.012071619246126647" pos="0.012 0.012999999999999999 -0.1318837554556721"/>
+      <site name="key 3 8" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.012071619246126647" pos="0.0040000000000000001 0.012999999999999999 -0.1318837554556721"/>
+      <site name="key 4 8" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.012071619246126647" pos="-0.0040000000000000001 0.012999999999999999 -0.1318837554556721"/>
+      <site name="key 5 8" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.012071619246126647" pos="-0.012 0.012999999999999999 -0.1318837554556721"/>
+      <site name="key 6 8" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.012071619246126647" pos="-0.02 0.012999999999999999 -0.1318837554556721"/>
+      <site name="key 1 9" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.011394958974482776" pos="0.02 0.012999999999999999 -0.10841717723506268"/>
+      <site name="key 2 9" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.011394958974482776" pos="0.012 0.012999999999999999 -0.10841717723506268"/>
+      <site name="key 3 9" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.011394958974482776" pos="0.0040000000000000001 0.012999999999999999 -0.10841717723506268"/>
+      <site name="key 4 9" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.011394958974482776" pos="-0.0040000000000000001 0.012999999999999999 -0.10841717723506268"/>
+      <site name="key 5 9" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.011394958974482776" pos="-0.012 0.012999999999999999 -0.10841717723506268"/>
+      <site name="key 6 9" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.011394958974482776" pos="-0.02 0.012999999999999999 -0.10841717723506268"/>
+      <site name="key 1 10" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.010756228090262889" pos="0.02 0.012999999999999999 -0.086265990170317025"/>
+      <site name="key 2 10" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.010756228090262889" pos="0.012 0.012999999999999999 -0.086265990170317025"/>
+      <site name="key 3 10" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.010756228090262889" pos="0.0040000000000000001 0.012999999999999999 -0.086265990170317025"/>
+      <site name="key 4 10" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.010756228090262889" pos="-0.0040000000000000001 0.012999999999999999 -0.086265990170317025"/>
+      <site name="key 5 10" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.010756228090262889" pos="-0.012 0.012999999999999999 -0.086265990170317025"/>
+      <site name="key 6 10" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.010756228090262889" pos="-0.02 0.012999999999999999 -0.086265990170317025"/>
+      <site name="key 1 11" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.010153300506727974" pos="0.02 0.012999999999999999 -0.065356461573326169"/>
+      <site name="key 2 11" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.010153300506727974" pos="0.012 0.012999999999999999 -0.065356461573326169"/>
+      <site name="key 3 11" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.010153300506727974" pos="0.0040000000000000001 0.012999999999999999 -0.065356461573326169"/>
+      <site name="key 4 11" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.010153300506727974" pos="-0.0040000000000000001 0.012999999999999999 -0.065356461573326169"/>
+      <site name="key 5 11" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.010153300506727974" pos="-0.012 0.012999999999999999 -0.065356461573326169"/>
+      <site name="key 6 11" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.010153300506727974" pos="-0.02 0.012999999999999999 -0.065356461573326169"/>
+      <site name="key 1 12" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0095841693124046577" pos="0.02 0.012999999999999999 -0.045618991754193539"/>
+      <site name="key 2 12" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0095841693124046577" pos="0.012 0.012999999999999999 -0.045618991754193539"/>
+      <site name="key 3 12" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0095841693124046577" pos="0.0040000000000000001 0.012999999999999999 -0.045618991754193539"/>
+      <site name="key 4 12" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0095841693124046577" pos="-0.0040000000000000001 0.012999999999999999 -0.045618991754193539"/>
+      <site name="key 5 12" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0095841693124046577" pos="-0.012 0.012999999999999999 -0.045618991754193539"/>
+      <site name="key 6 12" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0095841693124046577" pos="-0.02 0.012999999999999999 -0.045618991754193539"/>
+      <site name="key 1 13" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0090469400908573111" pos="0.02 0.012999999999999999 -0.02698788235093157"/>
+      <site name="key 2 13" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0090469400908573111" pos="0.012 0.012999999999999999 -0.02698788235093157"/>
+      <site name="key 3 13" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0090469400908573111" pos="0.0040000000000000001 0.012999999999999999 -0.02698788235093157"/>
+      <site name="key 4 13" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0090469400908573111" pos="-0.0040000000000000001 0.012999999999999999 -0.02698788235093157"/>
+      <site name="key 5 13" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0090469400908573111" pos="-0.012 0.012999999999999999 -0.02698788235093157"/>
+      <site name="key 6 13" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0090469400908573111" pos="-0.02 0.012999999999999999 -0.02698788235093157"/>
+      <site name="key 1 14" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.008539824614912395" pos="0.02 0.012999999999999999 -0.0094011176451618654"/>
+      <site name="key 2 14" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.008539824614912395" pos="0.012 0.012999999999999999 -0.0094011176451618654"/>
+      <site name="key 3 14" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.008539824614912395" pos="0.0040000000000000001 0.012999999999999999 -0.0094011176451618654"/>
+      <site name="key 4 14" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.008539824614912395" pos="-0.0040000000000000001 0.012999999999999999 -0.0094011176451618654"/>
+      <site name="key 5 14" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.008539824614912395" pos="-0.012 0.012999999999999999 -0.0094011176451618654"/>
+      <site name="key 6 14" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.008539824614912395" pos="-0.02 0.012999999999999999 -0.0094011176451618654"/>
+      <site name="key 1 15" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.008061134894345557" pos="0.02 0.012999999999999999 0.0071998418640960883"/>
+      <site name="key 2 15" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.008061134894345557" pos="0.012 0.012999999999999999 0.0071998418640960883"/>
+      <site name="key 3 15" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.008061134894345557" pos="0.0040000000000000001 0.012999999999999999 0.0071998418640960883"/>
+      <site name="key 4 15" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.008061134894345557" pos="-0.0040000000000000001 0.012999999999999999 0.0071998418640960883"/>
+      <site name="key 5 15" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.008061134894345557" pos="-0.012 0.012999999999999999 0.0071998418640960883"/>
+      <site name="key 6 15" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.008061134894345557" pos="-0.02 0.012999999999999999 0.0071998418640960883"/>
+      <site name="key 1 16" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0076092775572185632" pos="0.02 0.012999999999999999 0.022870254315660209"/>
+      <site name="key 2 16" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0076092775572185632" pos="0.012 0.012999999999999999 0.022870254315660209"/>
+      <site name="key 3 16" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0076092775572185632" pos="0.0040000000000000001 0.012999999999999999 0.022870254315660209"/>
+      <site name="key 4 16" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0076092775572185632" pos="-0.0040000000000000001 0.012999999999999999 0.022870254315660209"/>
+      <site name="key 5 16" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0076092775572185632" pos="-0.012 0.012999999999999999 0.022870254315660209"/>
+      <site name="key 6 16" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0076092775572185632" pos="-0.02 0.012999999999999999 0.022870254315660209"/>
+      <site name="key 1 17" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0071827485461637107" pos="0.02 0.012999999999999999 0.037662280419042488"/>
+      <site name="key 2 17" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0071827485461637107" pos="0.012 0.012999999999999999 0.037662280419042488"/>
+      <site name="key 3 17" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0071827485461637107" pos="0.0040000000000000001 0.012999999999999999 0.037662280419042488"/>
+      <site name="key 4 17" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0071827485461637107" pos="-0.0040000000000000001 0.012999999999999999 0.037662280419042488"/>
+      <site name="key 5 17" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0071827485461637107" pos="-0.012 0.012999999999999999 0.037662280419042488"/>
+      <site name="key 6 17" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0071827485461637107" pos="-0.02 0.012999999999999999 0.037662280419042488"/>
+      <site name="key 1 18" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0067801281119617089" pos="0.02 0.012999999999999999 0.051625157077167909"/>
+      <site name="key 2 18" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0067801281119617089" pos="0.012 0.012999999999999999 0.051625157077167909"/>
+      <site name="key 3 18" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0067801281119617089" pos="0.0040000000000000001 0.012999999999999999 0.051625157077167909"/>
+      <site name="key 4 18" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0067801281119617089" pos="-0.0040000000000000001 0.012999999999999999 0.051625157077167909"/>
+      <site name="key 5 18" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0067801281119617089" pos="-0.012 0.012999999999999999 0.051625157077167909"/>
+      <site name="key 6 18" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0067801281119617089" pos="-0.02 0.012999999999999999 0.051625157077167909"/>
+      <site name="key 1 19" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0064000760877486081" pos="0.02 0.012999999999999999 0.064805361276878221"/>
+      <site name="key 2 19" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0064000760877486081" pos="0.012 0.012999999999999999 0.064805361276878221"/>
+      <site name="key 3 19" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0064000760877486081" pos="0.0040000000000000001 0.012999999999999999 0.064805361276878221"/>
+      <site name="key 4 19" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0064000760877486081" pos="-0.0040000000000000001 0.012999999999999999 0.064805361276878221"/>
+      <site name="key 5 19" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0064000760877486081" pos="-0.012 0.012999999999999999 0.064805361276878221"/>
+      <site name="key 6 19" class="/" type="box" rgba="1 0 0 1" size="0.002 0.002 0.0064000760877486081" pos="-0.02 0.012999999999999999 0.064805361276878221"/>
+      <site name="key 1 20" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0060413274281214437" pos="0.02 0.012999999999999999 0.077246764792748279"/>
+      <site name="key 2 20" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0060413274281214437" pos="0.012 0.012999999999999999 0.077246764792748279"/>
+      <site name="key 3 20" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0060413274281214437" pos="0.0040000000000000001 0.012999999999999999 0.077246764792748279"/>
+      <site name="key 4 20" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0060413274281214437" pos="-0.0040000000000000001 0.012999999999999999 0.077246764792748279"/>
+      <site name="key 5 20" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0060413274281214437" pos="-0.012 0.012999999999999999 0.077246764792748279"/>
+      <site name="key 6 20" class="/" type="box" rgba="1 1 0 1" size="0.002 0.002 0.0060413274281214437" pos="-0.02 0.012999999999999999 0.077246764792748279"/>
+    </body>
+    <site name="tsite0" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <site name="tsite1" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <site name="tsite2" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <site name="tsite3" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <site name="tsite4" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <site name="tsite5" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <site name="tsite6" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <site name="tsite7" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <site name="tsite8" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <site name="tsite9" class="/" type="sphere" rgba="0 1 0 0" size="0.001"/>
+    <body name="rh_shadow_hand/">
+      <body name="rh_shadow_hand/rh_forearm" childclass="rh_shadow_hand/right_hand" pos="0.33095999999999998 0.080000000000000002 1.0172699999999999" quat="0.21898612815368604 0.013369100606685884 -0.97563176378049532 0.0030007710772060221">
+        <inertial pos="0 0 0.089999999999999997" mass="3" diaginertia="0.0138 0.0138 0.0074400000000000004"/>
+        <geom name="rh_shadow_hand//unnamed_geom_0" class="rh_shadow_hand/plastic_visual" material="rh_shadow_hand/gray" mesh="rh_shadow_hand/forearm_0"/>
+        <geom name="rh_shadow_hand//unnamed_geom_1" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/forearm_1"/>
+        <geom name="rh_shadow_hand//unnamed_geom_2" class="rh_shadow_hand/plastic_collision" type="mesh" mesh="rh_shadow_hand/forearm_collision"/>
+        <geom name="rh_shadow_hand//unnamed_geom_3" class="rh_shadow_hand/plastic_collision" type="box" size="0.035000000000000003 0.035000000000000003 0.035000000000000003" pos="0 -0.01 0.18099999999999999" quat="0.92490899999999998 0 0.38018800000000003 0"/>
+        <body name="rh_shadow_hand/rh_wrist" pos="0 -0.01 0.21301">
+          <inertial pos="0 0 0.029000000000000001" quat="0.5 0.5 0.5 0.5" mass="0.10000000000000001" diaginertia="6.3999999999999997e-05 4.3800000000000001e-05 3.4999999999999997e-05"/>
+          <joint name="rh_shadow_hand/rh_WRJ2" class="rh_shadow_hand/wrist_y"/>
+          <geom name="rh_shadow_hand//unnamed_geom_4" class="rh_shadow_hand/plastic_visual" material="rh_shadow_hand/metallic" mesh="rh_shadow_hand/wrist"/>
+          <geom name="rh_shadow_hand//unnamed_geom_5" class="rh_shadow_hand/plastic_collision" type="cylinder" size="0.0135 0.014999999999999999" quat="0.499998 0.5 0.5 -0.50000199999999995"/>
+          <geom name="rh_shadow_hand//unnamed_geom_6" class="rh_shadow_hand/plastic_collision" type="cylinder" size="0.010999999999999999 0.0050000000000000001" pos="-0.025999999999999999 0 0.034000000000000002" quat="1 0 1 0"/>
+          <geom name="rh_shadow_hand//unnamed_geom_7" class="rh_shadow_hand/plastic_collision" type="cylinder" size="0.010999999999999999 0.0050000000000000001" pos="0.031 0 0.034000000000000002" quat="1 0 1 0"/>
+          <geom name="rh_shadow_hand//unnamed_geom_8" class="rh_shadow_hand/plastic_collision" type="box" size="0.0135 0.0089999999999999993 0.0050000000000000001" pos="-0.021000000000000001 0 0.010999999999999999" quat="0.92387900000000001 0 0.38268400000000002 0"/>
+          <geom name="rh_shadow_hand//unnamed_geom_9" class="rh_shadow_hand/plastic_collision" type="box" size="0.0135 0.0089999999999999993 0.0050000000000000001" pos="0.025999999999999999 0 0.01" quat="0.92387900000000001 0 -0.38268400000000002 0"/>
+          <body name="rh_shadow_hand/rh_palm" pos="0 0 0.034000000000000002">
+            <inertial pos="0 0 0.035000000000000003" quat="1 0 0 1" mass="0.29999999999999999" diaginertia="0.0005287 0.00035809999999999998 0.00019100000000000001"/>
+            <joint name="rh_shadow_hand/rh_WRJ1" class="rh_shadow_hand/wrist_x"/>
+            <geom name="rh_shadow_hand//unnamed_geom_10" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/palm"/>
+            <geom name="rh_shadow_hand//unnamed_geom_11" class="rh_shadow_hand/plastic_collision" type="box" size="0.031 0.0035000000000000001 0.049000000000000002" pos="0.010999999999999999 0.0085000000000000006 0.037999999999999999"/>
+            <geom name="rh_shadow_hand//unnamed_geom_12" class="rh_shadow_hand/plastic_collision" type="box" size="0.017999999999999999 0.0085000000000000006 0.049000000000000002" pos="-0.002 -0.0035000000000000001 0.037999999999999999"/>
+            <geom name="rh_shadow_hand//unnamed_geom_13" class="rh_shadow_hand/plastic_collision" type="box" size="0.012999999999999999 0.0085000000000000006 0.0050000000000000001" pos="0.029000000000000001 -0.0035000000000000001 0.082000000000000003"/>
+            <geom name="rh_shadow_hand//unnamed_geom_14" class="rh_shadow_hand/plastic_collision" type="box" size="0.012999999999999999 0.0070000000000000001 0.0089999999999999993" pos="0.026499999999999999 -0.001 0.070000000000000007" quat="0.98724100000000004 0.099054500000000004 0.0124467 0.124052"/>
+            <geom name="rh_shadow_hand//unnamed_geom_15" class="rh_shadow_hand/plastic_collision" type="box" size="0.010500000000000001 0.0135 0.012" pos="0.0315 -0.0085000000000000006 0.001"/>
+            <geom name="rh_shadow_hand//unnamed_geom_16" class="rh_shadow_hand/plastic_collision" type="box" size="0.010999999999999999 0.0025000000000000001 0.014999999999999999" pos="0.012500000000000001 -0.014999999999999999 0.0040000000000000001" quat="0.97133800000000003 0 0 -0.237703"/>
+            <geom name="rh_shadow_hand//unnamed_geom_17" class="rh_shadow_hand/plastic_collision" type="box" size="0.0089999999999999993 0.012 0.002" pos="0.010999999999999999 0 0.088999999999999996"/>
+            <geom name="rh_shadow_hand//unnamed_geom_18" class="rh_shadow_hand/plastic_collision" type="box" size="0.01 0.012 0.02" pos="-0.029999999999999999 0 0.0089999999999999993"/>
+            <body name="rh_shadow_hand/rh_ffknuckle" pos="0.033000000000000002 0 0.095000000000000001">
+              <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.0080000000000000002" diaginertia="3.2000000000000001e-07 2.6e-07 2.6e-07"/>
+              <joint name="rh_shadow_hand/rh_FFJ4" class="rh_shadow_hand/knuckle"/>
+              <geom name="rh_shadow_hand//unnamed_geom_19" class="rh_shadow_hand/plastic_visual" material="rh_shadow_hand/metallic" pos="0 0 0.00050000000000000001" mesh="rh_shadow_hand/f_knuckle"/>
+              <geom name="rh_shadow_hand//unnamed_geom_20" class="rh_shadow_hand/plastic_collision" type="cylinder" size="0.0089999999999999993 0.0089999999999999993" quat="1 0 1 0"/>
+              <body name="rh_shadow_hand/rh_ffproximal">
+                <inertial pos="0 0 0.022499999999999999" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.0000000000000001e-05 9.7999999999999993e-06 1.7999999999999999e-06"/>
+                <joint name="rh_shadow_hand/rh_FFJ3" class="rh_shadow_hand/proximal"/>
+                <geom name="rh_shadow_hand//unnamed_geom_21" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_proximal"/>
+                <geom name="rh_shadow_hand//unnamed_geom_22" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.02" pos="0 0 0.025000000000000001"/>
+                <body name="rh_shadow_hand/rh_ffmiddle" pos="0 0 0.044999999999999998">
+                  <inertial pos="0 0 0.012500000000000001" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.7e-06 2.6000000000000001e-06 8.7000000000000003e-07"/>
+                  <joint name="rh_shadow_hand/rh_FFJ2" class="rh_shadow_hand/middle_distal"/>
+                  <geom name="rh_shadow_hand//unnamed_geom_23" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_middle"/>
+                  <geom name="rh_shadow_hand//unnamed_geom_24" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.012500000000000001" pos="0 0 0.012500000000000001"/>
+                  <body name="rh_shadow_hand/rh_ffdistal" pos="0 0 0.025000000000000001">
+                    <inertial pos="0 0 0.013076900000000001" quat="1 0 0 1" mass="0.012999999999999999" diaginertia="1.28092e-06 1.1209200000000001e-06 5.3000000000000001e-07"/>
+                    <joint name="rh_shadow_hand/rh_FFJ1" class="rh_shadow_hand/middle_distal"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_25" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_distal_pst"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_26" class="rh_shadow_hand/plastic_collision" type="mesh" mesh="rh_shadow_hand/f_distal_pst"/>
+                    <site name="rh_shadow_hand/ffdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0 0 0.032000000000000001"/>
+                    <site name="rh_shadow_hand/rh_FFJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                    <site name="rh_shadow_hand/ffdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.025999999999999999"/>
+                  </body>
+                  <site name="rh_shadow_hand/rh_FFJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="rh_shadow_hand/rh_FFJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+              <site name="rh_shadow_hand/rh_FFJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+            </body>
+            <body name="rh_shadow_hand/rh_mfknuckle" pos="0.010999999999999999 0 0.099000000000000005">
+              <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.0080000000000000002" diaginertia="3.2000000000000001e-07 2.6e-07 2.6e-07"/>
+              <joint name="rh_shadow_hand/rh_MFJ4" class="rh_shadow_hand/knuckle"/>
+              <geom name="rh_shadow_hand//unnamed_geom_27" class="rh_shadow_hand/plastic_visual" material="rh_shadow_hand/metallic" pos="0 0 0.00050000000000000001" mesh="rh_shadow_hand/f_knuckle"/>
+              <geom name="rh_shadow_hand//unnamed_geom_28" class="rh_shadow_hand/plastic_collision" type="cylinder" size="0.0089999999999999993 0.0089999999999999993" quat="1 0 1 0"/>
+              <body name="rh_shadow_hand/rh_mfproximal">
+                <inertial pos="0 0 0.022499999999999999" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.0000000000000001e-05 9.7999999999999993e-06 1.7999999999999999e-06"/>
+                <joint name="rh_shadow_hand/rh_MFJ3" class="rh_shadow_hand/proximal"/>
+                <geom name="rh_shadow_hand//unnamed_geom_29" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_proximal"/>
+                <geom name="rh_shadow_hand//unnamed_geom_30" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.02" pos="0 0 0.025000000000000001"/>
+                <body name="rh_shadow_hand/rh_mfmiddle" pos="0 0 0.044999999999999998">
+                  <inertial pos="0 0 0.012500000000000001" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.7e-06 2.6000000000000001e-06 8.7000000000000003e-07"/>
+                  <joint name="rh_shadow_hand/rh_MFJ2" class="rh_shadow_hand/middle_distal"/>
+                  <geom name="rh_shadow_hand//unnamed_geom_31" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_middle"/>
+                  <geom name="rh_shadow_hand//unnamed_geom_32" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.012500000000000001" pos="0 0 0.012500000000000001"/>
+                  <body name="rh_shadow_hand/rh_mfdistal" pos="0 0 0.025000000000000001">
+                    <inertial pos="0 0 0.013076900000000001" quat="1 0 0 1" mass="0.012999999999999999" diaginertia="1.28092e-06 1.1209200000000001e-06 5.3000000000000001e-07"/>
+                    <joint name="rh_shadow_hand/rh_MFJ1" class="rh_shadow_hand/middle_distal"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_33" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_distal_pst"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_34" class="rh_shadow_hand/plastic_collision" type="mesh" mesh="rh_shadow_hand/f_distal_pst"/>
+                    <site name="rh_shadow_hand/mfdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0 0 0.032000000000000001"/>
+                    <site name="rh_shadow_hand/rh_MFJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                    <site name="rh_shadow_hand/mfdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.025999999999999999"/>
+                  </body>
+                  <site name="rh_shadow_hand/rh_MFJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="rh_shadow_hand/rh_MFJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+              <site name="rh_shadow_hand/rh_MFJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+            </body>
+            <body name="rh_shadow_hand/rh_rfknuckle" pos="-0.010999999999999999 0 0.095000000000000001">
+              <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.0080000000000000002" diaginertia="3.2000000000000001e-07 2.6e-07 2.6e-07"/>
+              <joint name="rh_shadow_hand/rh_RFJ4" class="rh_shadow_hand/knuckle" axis="0 1 0"/>
+              <geom name="rh_shadow_hand//unnamed_geom_35" class="rh_shadow_hand/plastic_visual" material="rh_shadow_hand/metallic" pos="0 0 0.00050000000000000001" mesh="rh_shadow_hand/f_knuckle"/>
+              <geom name="rh_shadow_hand//unnamed_geom_36" class="rh_shadow_hand/plastic_collision" type="cylinder" size="0.0089999999999999993 0.0089999999999999993" quat="1 0 1 0"/>
+              <body name="rh_shadow_hand/rh_rfproximal">
+                <inertial pos="0 0 0.022499999999999999" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.0000000000000001e-05 9.7999999999999993e-06 1.7999999999999999e-06"/>
+                <joint name="rh_shadow_hand/rh_RFJ3" class="rh_shadow_hand/proximal"/>
+                <geom name="rh_shadow_hand//unnamed_geom_37" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_proximal"/>
+                <geom name="rh_shadow_hand//unnamed_geom_38" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.02" pos="0 0 0.025000000000000001"/>
+                <body name="rh_shadow_hand/rh_rfmiddle" pos="0 0 0.044999999999999998">
+                  <inertial pos="0 0 0.012500000000000001" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.7e-06 2.6000000000000001e-06 8.7000000000000003e-07"/>
+                  <joint name="rh_shadow_hand/rh_RFJ2" class="rh_shadow_hand/middle_distal"/>
+                  <geom name="rh_shadow_hand//unnamed_geom_39" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_middle"/>
+                  <geom name="rh_shadow_hand//unnamed_geom_40" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.012500000000000001" pos="0 0 0.012500000000000001"/>
+                  <body name="rh_shadow_hand/rh_rfdistal" pos="0 0 0.025000000000000001">
+                    <inertial pos="0 0 0.013076900000000001" quat="1 0 0 1" mass="0.012999999999999999" diaginertia="1.28092e-06 1.1209200000000001e-06 5.3000000000000001e-07"/>
+                    <joint name="rh_shadow_hand/rh_RFJ1" class="rh_shadow_hand/middle_distal"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_41" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_distal_pst"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_42" class="rh_shadow_hand/plastic_collision" type="mesh" mesh="rh_shadow_hand/f_distal_pst"/>
+                    <site name="rh_shadow_hand/rfdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0 0 0.032000000000000001"/>
+                    <site name="rh_shadow_hand/rh_RFJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                    <site name="rh_shadow_hand/rfdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.025999999999999999"/>
+                  </body>
+                  <site name="rh_shadow_hand/rh_RFJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="rh_shadow_hand/rh_RFJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+              <site name="rh_shadow_hand/rh_RFJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+            </body>
+            <body name="rh_shadow_hand/rh_lfmetacarpal" pos="-0.033000000000000002 0 0.020709999999999999">
+              <inertial pos="0 0 0.040000000000000001" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.6379999999999999e-05 1.45e-05 4.2719999999999999e-06"/>
+              <geom name="rh_shadow_hand//unnamed_geom_43" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/lf_metacarpal"/>
+              <geom name="rh_shadow_hand//unnamed_geom_44" class="rh_shadow_hand/plastic_collision" type="box" size="0.010999999999999999 0.012 0.025000000000000001" pos="0.002 0 0.033000000000000002"/>
+              <body name="rh_shadow_hand/rh_lfknuckle" pos="0 0 0.065790000000000001">
+                <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.0080000000000000002" diaginertia="3.2000000000000001e-07 2.6e-07 2.6e-07"/>
+                <joint name="rh_shadow_hand/rh_LFJ4" class="rh_shadow_hand/knuckle" axis="0 1 0"/>
+                <geom name="rh_shadow_hand//unnamed_geom_45" class="rh_shadow_hand/plastic_visual" material="rh_shadow_hand/metallic" pos="0 0 0.00050000000000000001" mesh="rh_shadow_hand/f_knuckle"/>
+                <geom name="rh_shadow_hand//unnamed_geom_46" class="rh_shadow_hand/plastic_collision" type="cylinder" size="0.0089999999999999993 0.0089999999999999993" quat="1 0 1 0"/>
+                <body name="rh_shadow_hand/rh_lfproximal">
+                  <inertial pos="0 0 0.022499999999999999" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.0000000000000001e-05 9.7999999999999993e-06 1.7999999999999999e-06"/>
+                  <joint name="rh_shadow_hand/rh_LFJ3" class="rh_shadow_hand/proximal"/>
+                  <geom name="rh_shadow_hand//unnamed_geom_47" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_proximal"/>
+                  <geom name="rh_shadow_hand//unnamed_geom_48" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.02" pos="0 0 0.025000000000000001"/>
+                  <body name="rh_shadow_hand/rh_lfmiddle" pos="0 0 0.044999999999999998">
+                    <inertial pos="0 0 0.012500000000000001" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.7e-06 2.6000000000000001e-06 8.7000000000000003e-07"/>
+                    <joint name="rh_shadow_hand/rh_LFJ2" class="rh_shadow_hand/middle_distal"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_49" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_middle"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_50" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.012500000000000001" pos="0 0 0.012500000000000001"/>
+                    <body name="rh_shadow_hand/rh_lfdistal" pos="0 0 0.025000000000000001">
+                      <inertial pos="0 0 0.013076900000000001" quat="1 0 0 1" mass="0.012999999999999999" diaginertia="1.28092e-06 1.1209200000000001e-06 5.3000000000000001e-07"/>
+                      <joint name="rh_shadow_hand/rh_LFJ1" class="rh_shadow_hand/middle_distal"/>
+                      <geom name="rh_shadow_hand//unnamed_geom_51" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/f_distal_pst"/>
+                      <geom name="rh_shadow_hand//unnamed_geom_52" class="rh_shadow_hand/plastic_collision" type="mesh" mesh="rh_shadow_hand/f_distal_pst"/>
+                      <site name="rh_shadow_hand/lfdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0 0 0.032000000000000001"/>
+                      <site name="rh_shadow_hand/rh_LFJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                      <site name="rh_shadow_hand/lfdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.025999999999999999"/>
+                    </body>
+                    <site name="rh_shadow_hand/rh_LFJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                  </body>
+                  <site name="rh_shadow_hand/rh_LFJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="rh_shadow_hand/rh_LFJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+            </body>
+            <body name="rh_shadow_hand/rh_thbase" pos="0.034000000000000002 -0.0085800000000000008 0.029000000000000001" quat="0.92388000000000003 0 0.382683 0">
+              <inertial pos="0 0 0" mass="0.01" diaginertia="1.6e-07 1.6e-07 1.6e-07"/>
+              <joint name="rh_shadow_hand/rh_THJ6" class="rh_shadow_hand/thbase1"/>
+              <geom name="rh_shadow_hand//unnamed_geom_53" class="rh_shadow_hand/plastic_collision" size="0.012999999999999999"/>
+              <body name="rh_shadow_hand/rh_thproximal">
+                <inertial pos="0 0 0.019" mass="0.040000000000000001" diaginertia="1.36e-05 1.36e-05 3.1300000000000001e-06"/>
+                <joint name="rh_shadow_hand/rh_THJ4" class="rh_shadow_hand/thproximal"/>
+                <geom name="rh_shadow_hand//unnamed_geom_54" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/th_proximal"/>
+                <geom name="rh_shadow_hand//unnamed_geom_55" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.010500000000000001 0.0089999999999999993" pos="0 0 0.02"/>
+                <body name="rh_shadow_hand/rh_thhub" pos="0 0 0.037999999999999999">
+                  <inertial pos="0 0 0" mass="0.0050000000000000001" diaginertia="9.9999999999999995e-07 9.9999999999999995e-07 2.9999999999999999e-07"/>
+                  <joint name="rh_shadow_hand/rh_THJ3" class="rh_shadow_hand/thhub"/>
+                  <geom name="rh_shadow_hand//unnamed_geom_56" class="rh_shadow_hand/plastic_collision" size="0.010999999999999999"/>
+                  <body name="rh_shadow_hand/rh_thmiddle">
+                    <inertial pos="0 0 0.016" mass="0.02" diaginertia="5.1000000000000003e-06 5.1000000000000003e-06 1.2100000000000001e-06"/>
+                    <joint name="rh_shadow_hand/rh_THJ2" class="rh_shadow_hand/thmiddle" range="0 0.69813199999999997"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_57" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/th_middle"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_58" class="rh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.0089999999999999993" pos="0 0 0.012"/>
+                    <geom name="rh_shadow_hand//unnamed_geom_59" class="rh_shadow_hand/plastic_collision" size="0.01" pos="0 0 0.029999999999999999"/>
+                    <body name="rh_shadow_hand/rh_thdistal" pos="0 0 0.032000000000000001" quat="1 0 0 -1">
+                      <inertial pos="0 0 0.0145588" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.37794e-06 2.2779400000000001e-06 9.9999999999999995e-07"/>
+                      <geom name="rh_shadow_hand//unnamed_geom_60" class="rh_shadow_hand/plastic_visual" mesh="rh_shadow_hand/th_distal_pst"/>
+                      <geom name="rh_shadow_hand//unnamed_geom_61" class="rh_shadow_hand/plastic_collision" type="mesh" mesh="rh_shadow_hand/th_distal_pst"/>
+                      <site name="rh_shadow_hand/thdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0.0040000000000000001 0 0.035999999999999997"/>
+                      <site name="rh_shadow_hand/thdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.029999999999999999"/>
+                    </body>
+                    <site name="rh_shadow_hand/rh_THJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                  </body>
+                  <site name="rh_shadow_hand/rh_THJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="rh_shadow_hand/rh_THJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+              <site name="rh_shadow_hand/rh_THJ6_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+            </body>
+            <site name="rh_shadow_hand/rh_WRJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+          </body>
+          <site name="rh_shadow_hand/rh_WRJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+        </body>
+      </body>
+    </body>
+    <body name="lh_shadow_hand/">
+      <body name="lh_shadow_hand/lh_forearm" childclass="lh_shadow_hand/left_hand" pos="-0.29999999999999999 -0.32000000000000001 0.59999999999999998" quat="0.70704041551669261 -0.70704041551669261 0.0096876499815280043 -0.0096876499815279175">
+        <inertial pos="0 0 0.089999999999999997" mass="3" diaginertia="0.0138 0.0138 0.0074400000000000004"/>
+        <geom name="lh_shadow_hand//unnamed_geom_0" class="lh_shadow_hand/plastic_visual" material="lh_shadow_hand/gray" mesh="lh_shadow_hand/forearm_0"/>
+        <geom name="lh_shadow_hand//unnamed_geom_1" class="lh_shadow_hand/plastic_visual" pos="0 0 0" mesh="lh_shadow_hand/forearm_1"/>
+        <geom name="lh_shadow_hand//unnamed_geom_2" class="lh_shadow_hand/plastic_collision" type="mesh" mesh="lh_shadow_hand/forearm_collision"/>
+        <geom name="lh_shadow_hand//unnamed_geom_3" class="lh_shadow_hand/plastic_collision" type="box" size="0.035000000000000003 0.035000000000000003 0.035000000000000003" pos="0 0.01 0.18099999999999999" quat="0.92490899999999998 0 0.38018800000000003 0"/>
+        <body name="lh_shadow_hand/lh_wrist" pos="0 -0.01 0.21301">
+          <inertial pos="0 0 0.029000000000000001" quat="0.5 0.5 0.5 0.5" mass="0.10000000000000001" diaginertia="6.3999999999999997e-05 4.3800000000000001e-05 3.4999999999999997e-05"/>
+          <joint name="lh_shadow_hand/lh_WRJ2" class="lh_shadow_hand/wrist_y" range="-0.0001 0.0001"/>
+          <geom name="lh_shadow_hand//unnamed_geom_4" class="lh_shadow_hand/plastic_visual" material="lh_shadow_hand/metallic" mesh="lh_shadow_hand/wrist"/>
+          <geom name="lh_shadow_hand//unnamed_geom_5" class="lh_shadow_hand/plastic_collision" type="cylinder" size="0.0135 0.014999999999999999" quat="0.499998 0.5 0.5 -0.50000199999999995"/>
+          <geom name="lh_shadow_hand//unnamed_geom_6" class="lh_shadow_hand/plastic_collision" type="cylinder" size="0.010999999999999999 0.0050000000000000001" pos="0.025999999999999999 0 0.034000000000000002" quat="1 0 1 0"/>
+          <geom name="lh_shadow_hand//unnamed_geom_7" class="lh_shadow_hand/plastic_collision" type="cylinder" size="0.010999999999999999 0.0050000000000000001" pos="-0.031 0 0.034000000000000002" quat="1 0 1 0"/>
+          <geom name="lh_shadow_hand//unnamed_geom_8" class="lh_shadow_hand/plastic_collision" type="box" size="0.0135 0.0089999999999999993 0.0050000000000000001" pos="0.021000000000000001 0 0.010999999999999999" quat="-0.92387900000000001 0 0.38268400000000002 0"/>
+          <geom name="lh_shadow_hand//unnamed_geom_9" class="lh_shadow_hand/plastic_collision" type="box" size="0.0135 0.0089999999999999993 0.0050000000000000001" pos="-0.025999999999999999 0 0.01" quat="-0.92387900000000001 0 -0.38268400000000002 0"/>
+          <body name="lh_shadow_hand/lh_palm" pos="0 0 0.034000000000000002">
+            <inertial pos="0 0 0.035000000000000003" quat="1 0 0 1" mass="0.29999999999999999" diaginertia="0.0005287 0.00035809999999999998 0.00019100000000000001"/>
+            <joint name="lh_shadow_hand/lh_WRJ1" class="lh_shadow_hand/wrist_x" range="0 0.78900000000000003"/>
+            <geom name="lh_shadow_hand//unnamed_geom_10" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/palm"/>
+            <geom name="lh_shadow_hand//unnamed_geom_11" class="lh_shadow_hand/plastic_collision" type="box" size="0.031 0.0035000000000000001 0.049000000000000002" pos="-0.010999999999999999 0.0085000000000000006 0.037999999999999999"/>
+            <geom name="lh_shadow_hand//unnamed_geom_12" class="lh_shadow_hand/plastic_collision" type="box" size="0.017999999999999999 0.0085000000000000006 0.049000000000000002" pos="0.002 -0.0035000000000000001 0.037999999999999999"/>
+            <geom name="lh_shadow_hand//unnamed_geom_13" class="lh_shadow_hand/plastic_collision" type="box" size="0.012999999999999999 0.0085000000000000006 0.0050000000000000001" pos="-0.029000000000000001 -0.0035000000000000001 0.082000000000000003"/>
+            <geom name="lh_shadow_hand//unnamed_geom_14" class="lh_shadow_hand/plastic_collision" type="box" size="0.012999999999999999 0.0070000000000000001 0.0089999999999999993" pos="-0.026499999999999999 -0.001 0.070000000000000007" quat="0.98724100000000004 0.099054500000000004 0.0124467 -0.124052"/>
+            <geom name="lh_shadow_hand//unnamed_geom_15" class="lh_shadow_hand/plastic_collision" type="box" size="0.010500000000000001 0.0135 0.0112" pos="-0.0315 -0.0085000000000000006 0.001"/>
+            <geom name="lh_shadow_hand//unnamed_geom_16" class="lh_shadow_hand/plastic_collision" type="box" size="0.010999999999999999 0.0025000000000000001 0.014999999999999999" pos="-0.012500000000000001 -0.014999999999999999 0.0040000000000000001" quat="-0.97133800000000003 0 0 -0.237703"/>
+            <geom name="lh_shadow_hand//unnamed_geom_17" class="lh_shadow_hand/plastic_collision" type="box" size="0.0089999999999999993 0.012 0.002" pos="-0.010999999999999999 0 0.088999999999999996"/>
+            <geom name="lh_shadow_hand//unnamed_geom_18" class="lh_shadow_hand/plastic_collision" type="box" size="0.01 0.012 0.02" pos="0.029999999999999999 0 0.0089999999999999993"/>
+            <body name="lh_shadow_hand/lh_ffknuckle" pos="-0.033000000000000002 0 0.095000000000000001">
+              <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.0080000000000000002" diaginertia="3.2000000000000001e-07 2.6e-07 2.6e-07"/>
+              <joint name="lh_shadow_hand/lh_FFJ4" class="lh_shadow_hand/knuckle" axis="0 1 0" range="-0.34899999999999998 0.34899999999999998"/>
+              <geom name="lh_shadow_hand//unnamed_geom_19" class="lh_shadow_hand/plastic_visual" material="lh_shadow_hand/metallic" pos="0 0 0.00050000000000000001" mesh="lh_shadow_hand/f_knuckle"/>
+              <geom name="lh_shadow_hand//unnamed_geom_20" class="lh_shadow_hand/plastic_collision" type="cylinder" size="0.0089999999999999993 0.0089999999999999993" quat="1 0 1 0"/>
+              <body name="lh_shadow_hand/lh_ffproximal">
+                <inertial pos="0 0 0.022499999999999999" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.0000000000000001e-05 9.7999999999999993e-06 1.7999999999999999e-06"/>
+                <joint name="lh_shadow_hand/lh_FFJ3" class="lh_shadow_hand/proximal" range="0 1.5700000000000001"/>
+                <geom name="lh_shadow_hand//unnamed_geom_21" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_proximal"/>
+                <geom name="lh_shadow_hand//unnamed_geom_22" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.02" pos="0 0 0.025000000000000001"/>
+                <body name="lh_shadow_hand/lh_ffmiddle" pos="0 0 0.044999999999999998">
+                  <inertial pos="0 0 0.012500000000000001" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.7e-06 2.6000000000000001e-06 8.7000000000000003e-07"/>
+                  <joint name="lh_shadow_hand/lh_FFJ2" class="lh_shadow_hand/middle_distal"/>
+                  <geom name="lh_shadow_hand//unnamed_geom_23" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_middle"/>
+                  <geom name="lh_shadow_hand//unnamed_geom_24" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.012500000000000001" pos="0 0 0.012500000000000001"/>
+                  <body name="lh_shadow_hand/lh_ffdistal" pos="0 0 0.025000000000000001">
+                    <inertial pos="0 0 0.013076900000000001" quat="1 0 0 1" mass="0.012999999999999999" diaginertia="1.28092e-06 1.1209200000000001e-06 5.3000000000000001e-07"/>
+                    <joint name="lh_shadow_hand/lh_FFJ1" class="lh_shadow_hand/middle_distal"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_25" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_distal_pst"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_26" class="lh_shadow_hand/plastic_collision" type="mesh" mesh="lh_shadow_hand/f_distal_pst"/>
+                    <site name="lh_shadow_hand/ffdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0 0 0.032000000000000001"/>
+                    <site name="lh_shadow_hand/lh_FFJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                    <site name="lh_shadow_hand/ffdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.025999999999999999"/>
+                  </body>
+                  <site name="lh_shadow_hand/lh_FFJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="lh_shadow_hand/lh_FFJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+              <site name="lh_shadow_hand/lh_FFJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+            </body>
+            <body name="lh_shadow_hand/lh_mfknuckle" pos="-0.010999999999999999 0 0.099000000000000005">
+              <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.0080000000000000002" diaginertia="3.2000000000000001e-07 2.6e-07 2.6e-07"/>
+              <joint name="lh_shadow_hand/lh_MFJ4" class="lh_shadow_hand/knuckle" axis="0 1 0" range="-0.34899999999999998 0.34899999999999998"/>
+              <geom name="lh_shadow_hand//unnamed_geom_27" class="lh_shadow_hand/plastic_visual" material="lh_shadow_hand/metallic" pos="0 0 0.00050000000000000001" mesh="lh_shadow_hand/f_knuckle"/>
+              <geom name="lh_shadow_hand//unnamed_geom_28" class="lh_shadow_hand/plastic_collision" type="cylinder" size="0.0089999999999999993 0.0089999999999999993" quat="1 0 1 0"/>
+              <body name="lh_shadow_hand/lh_mfproximal">
+                <inertial pos="0 0 0.022499999999999999" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.0000000000000001e-05 9.7999999999999993e-06 1.7999999999999999e-06"/>
+                <joint name="lh_shadow_hand/lh_MFJ3" class="lh_shadow_hand/proximal" range="0 1.5700000000000001"/>
+                <geom name="lh_shadow_hand//unnamed_geom_29" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_proximal"/>
+                <geom name="lh_shadow_hand//unnamed_geom_30" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.02" pos="0 0 0.025000000000000001"/>
+                <body name="lh_shadow_hand/lh_mfmiddle" pos="0 0 0.044999999999999998">
+                  <inertial pos="0 0 0.012500000000000001" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.7e-06 2.6000000000000001e-06 8.7000000000000003e-07"/>
+                  <joint name="lh_shadow_hand/lh_MFJ2" class="lh_shadow_hand/middle_distal"/>
+                  <geom name="lh_shadow_hand//unnamed_geom_31" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_middle"/>
+                  <geom name="lh_shadow_hand//unnamed_geom_32" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.012500000000000001" pos="0 0 0.012500000000000001"/>
+                  <body name="lh_shadow_hand/lh_mfdistal" pos="0 0 0.025000000000000001">
+                    <inertial pos="0 0 0.013076900000000001" quat="1 0 0 1" mass="0.012999999999999999" diaginertia="1.28092e-06 1.1209200000000001e-06 5.3000000000000001e-07"/>
+                    <joint name="lh_shadow_hand/lh_MFJ1" class="lh_shadow_hand/middle_distal"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_33" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_distal_pst"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_34" class="lh_shadow_hand/plastic_collision" type="mesh" mesh="lh_shadow_hand/f_distal_pst"/>
+                    <site name="lh_shadow_hand/mfdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0 0 0.032000000000000001"/>
+                    <site name="lh_shadow_hand/lh_MFJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                    <site name="lh_shadow_hand/mfdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.025999999999999999"/>
+                  </body>
+                  <site name="lh_shadow_hand/lh_MFJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="lh_shadow_hand/lh_MFJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+              <site name="lh_shadow_hand/lh_MFJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+            </body>
+            <body name="lh_shadow_hand/lh_rfknuckle" pos="0.010999999999999999 0 0.095000000000000001">
+              <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.0080000000000000002" diaginertia="3.2000000000000001e-07 2.6e-07 2.6e-07"/>
+              <joint name="lh_shadow_hand/lh_RFJ4" class="lh_shadow_hand/knuckle" range="-0.34899999999999998 0.34899999999999998"/>
+              <geom name="lh_shadow_hand//unnamed_geom_35" class="lh_shadow_hand/plastic_visual" material="lh_shadow_hand/metallic" pos="0 0 0.00050000000000000001" mesh="lh_shadow_hand/f_knuckle"/>
+              <geom name="lh_shadow_hand//unnamed_geom_36" class="lh_shadow_hand/plastic_collision" type="cylinder" size="0.0089999999999999993 0.0089999999999999993" quat="1 0 1 0"/>
+              <body name="lh_shadow_hand/lh_rfproximal">
+                <inertial pos="0 0 0.022499999999999999" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.0000000000000001e-05 9.7999999999999993e-06 1.7999999999999999e-06"/>
+                <joint name="lh_shadow_hand/lh_RFJ3" class="lh_shadow_hand/proximal" range="0 1.5700000000000001"/>
+                <geom name="lh_shadow_hand//unnamed_geom_37" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_proximal"/>
+                <geom name="lh_shadow_hand//unnamed_geom_38" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.02" pos="0 0 0.025000000000000001"/>
+                <body name="lh_shadow_hand/lh_rfmiddle" pos="0 0 0.044999999999999998">
+                  <inertial pos="0 0 0.012500000000000001" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.7e-06 2.6000000000000001e-06 8.7000000000000003e-07"/>
+                  <joint name="lh_shadow_hand/lh_RFJ2" class="lh_shadow_hand/middle_distal"/>
+                  <geom name="lh_shadow_hand//unnamed_geom_39" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_middle"/>
+                  <geom name="lh_shadow_hand//unnamed_geom_40" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.012500000000000001" pos="0 0 0.012500000000000001"/>
+                  <body name="lh_shadow_hand/lh_rfdistal" pos="0 0 0.025000000000000001">
+                    <inertial pos="0 0 0.013076900000000001" quat="1 0 0 1" mass="0.012999999999999999" diaginertia="1.28092e-06 1.1209200000000001e-06 5.3000000000000001e-07"/>
+                    <joint name="lh_shadow_hand/lh_RFJ1" class="lh_shadow_hand/middle_distal"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_41" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_distal_pst"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_42" class="lh_shadow_hand/plastic_collision" type="mesh" mesh="lh_shadow_hand/f_distal_pst"/>
+                    <site name="lh_shadow_hand/rfdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0 0 0.032000000000000001"/>
+                    <site name="lh_shadow_hand/lh_RFJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                    <site name="lh_shadow_hand/rfdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.025999999999999999"/>
+                  </body>
+                  <site name="lh_shadow_hand/lh_RFJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="lh_shadow_hand/lh_RFJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+              <site name="lh_shadow_hand/lh_RFJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+            </body>
+            <body name="lh_shadow_hand/lh_lfmetacarpal" pos="0.033000000000000002 0 0.020709999999999999">
+              <inertial pos="0 0 0.040000000000000001" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.6379999999999999e-05 1.45e-05 4.2719999999999999e-06"/>
+              <geom name="lh_shadow_hand//unnamed_geom_43" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/lf_metacarpal"/>
+              <geom name="lh_shadow_hand//unnamed_geom_44" class="lh_shadow_hand/plastic_collision" type="box" size="0.010999999999999999 0.012 0.025000000000000001" pos="-0.002 0 0.033000000000000002"/>
+              <body name="lh_shadow_hand/lh_lfknuckle" pos="0 0 0.065790000000000001">
+                <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.0080000000000000002" diaginertia="3.2000000000000001e-07 2.6e-07 2.6e-07"/>
+                <joint name="lh_shadow_hand/lh_LFJ4" class="lh_shadow_hand/knuckle" range="-0.34899999999999998 0.34899999999999998"/>
+                <geom name="lh_shadow_hand//unnamed_geom_45" class="lh_shadow_hand/plastic_visual" material="lh_shadow_hand/metallic" pos="0 0 0.00050000000000000001" mesh="lh_shadow_hand/f_knuckle"/>
+                <geom name="lh_shadow_hand//unnamed_geom_46" class="lh_shadow_hand/plastic_collision" type="cylinder" size="0.0089999999999999993 0.0089999999999999993" quat="1 0 1 0"/>
+                <body name="lh_shadow_hand/lh_lfproximal">
+                  <inertial pos="0 0 0.022499999999999999" quat="1 0 0 1" mass="0.029999999999999999" diaginertia="1.0000000000000001e-05 9.7999999999999993e-06 1.7999999999999999e-06"/>
+                  <joint name="lh_shadow_hand/lh_LFJ3" class="lh_shadow_hand/proximal" range="0 1.5700000000000001"/>
+                  <geom name="lh_shadow_hand//unnamed_geom_47" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_proximal"/>
+                  <geom name="lh_shadow_hand//unnamed_geom_48" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.02" pos="0 0 0.025000000000000001"/>
+                  <body name="lh_shadow_hand/lh_lfmiddle" pos="0 0 0.044999999999999998">
+                    <inertial pos="0 0 0.012500000000000001" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.7e-06 2.6000000000000001e-06 8.7000000000000003e-07"/>
+                    <joint name="lh_shadow_hand/lh_LFJ2" class="lh_shadow_hand/middle_distal"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_49" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_middle"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_50" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.012500000000000001" pos="0 0 0.012500000000000001"/>
+                    <body name="lh_shadow_hand/lh_lfdistal" pos="0 0 0.025000000000000001">
+                      <inertial pos="0 0 0.013076900000000001" quat="1 0 0 1" mass="0.012999999999999999" diaginertia="1.28092e-06 1.1209200000000001e-06 5.3000000000000001e-07"/>
+                      <joint name="lh_shadow_hand/lh_LFJ1" class="lh_shadow_hand/middle_distal"/>
+                      <geom name="lh_shadow_hand//unnamed_geom_51" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/f_distal_pst"/>
+                      <geom name="lh_shadow_hand//unnamed_geom_52" class="lh_shadow_hand/plastic_collision" type="mesh" mesh="lh_shadow_hand/f_distal_pst"/>
+                      <site name="lh_shadow_hand/lfdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0 0 0.032000000000000001"/>
+                      <site name="lh_shadow_hand/lh_LFJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                      <site name="lh_shadow_hand/lfdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.025999999999999999"/>
+                    </body>
+                    <site name="lh_shadow_hand/lh_LFJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                  </body>
+                  <site name="lh_shadow_hand/lh_LFJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="lh_shadow_hand/lh_LFJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+            </body>
+            <body name="lh_shadow_hand/lh_thbase" pos="-0.034000000000000002 -0.0085800000000000008 0.029000000000000001" quat="0 -0.382683 0 0.92388000000000003">
+              <inertial pos="0 0 0" mass="0.01" diaginertia="1.6e-07 1.6e-07 1.6e-07"/>
+              <geom name="lh_shadow_hand//unnamed_geom_53" class="lh_shadow_hand/plastic_collision" size="0.012999999999999999"/>
+              <body name="lh_shadow_hand/lh_thproximal">
+                <inertial pos="0 0 0.019" mass="0.040000000000000001" diaginertia="1.36e-05 1.36e-05 3.1300000000000001e-06"/>
+                <joint name="lh_shadow_hand/lh_THJ4" class="lh_shadow_hand/thproximal" range="-0.0001 0.0001"/>
+                <geom name="lh_shadow_hand//unnamed_geom_54" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/th_proximal"/>
+                <geom name="lh_shadow_hand//unnamed_geom_55" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.010500000000000001 0.0089999999999999993" pos="0 0 0.02"/>
+                <body name="lh_shadow_hand/lh_thhub" pos="0 0 0.037999999999999999">
+                  <inertial pos="0 0 0" mass="0.0050000000000000001" diaginertia="9.9999999999999995e-07 9.9999999999999995e-07 2.9999999999999999e-07"/>
+                  <joint name="lh_shadow_hand/lh_THJ3" class="lh_shadow_hand/thhub" range="-0.0001 0.0001"/>
+                  <geom name="lh_shadow_hand//unnamed_geom_56" class="lh_shadow_hand/plastic_collision" size="0.010999999999999999"/>
+                  <body name="lh_shadow_hand/lh_thmiddle">
+                    <inertial pos="0 0 0.016" mass="0.02" diaginertia="5.1000000000000003e-06 5.1000000000000003e-06 1.2100000000000001e-06"/>
+                    <joint name="lh_shadow_hand/lh_THJ2" class="lh_shadow_hand/thmiddle" range="0 0.69813199999999997"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_57" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/th_middle"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_58" class="lh_shadow_hand/plastic_collision" type="capsule" size="0.0089999999999999993 0.0089999999999999993" pos="0 0 0.012"/>
+                    <geom name="lh_shadow_hand//unnamed_geom_59" class="lh_shadow_hand/plastic_collision" size="0.01" pos="0 0 0.029999999999999999"/>
+                    <body name="lh_shadow_hand/lh_thdistal" pos="0 0 0.032000000000000001" quat="1 0 0 -1">
+                      <inertial pos="0 0 0.0145588" quat="1 0 0 1" mass="0.017000000000000001" diaginertia="2.37794e-06 2.2779400000000001e-06 9.9999999999999995e-07"/>
+                      <geom name="lh_shadow_hand//unnamed_geom_60" class="lh_shadow_hand/plastic_visual" mesh="lh_shadow_hand/th_distal_pst"/>
+                      <geom name="lh_shadow_hand//unnamed_geom_61" class="lh_shadow_hand/plastic_collision" type="mesh" mesh="lh_shadow_hand/th_distal_pst"/>
+                      <site name="lh_shadow_hand/thdistal_site" type="sphere" rgba="1 0 0 0" size="0.001" pos="0 -0.0070000000000000001 0.026000000000000002"/>
+                      <site name="lh_shadow_hand/thdistal_touch_site" type="sphere" group="4" rgba="0 1 0 0.59999999999999998" size="0.01" pos="0 0 0.02"/>
+                    </body>
+                    <site name="lh_shadow_hand/lh_THJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                  </body>
+                  <site name="lh_shadow_hand/lh_THJ3_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+                </body>
+                <site name="lh_shadow_hand/lh_THJ4_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+              </body>
+            </body>
+            <site name="lh_shadow_hand/lh_WRJ1_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+          </body>
+          <site name="lh_shadow_hand/lh_WRJ2_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+        </body>
+        <joint name="lh_shadow_hand/forearm_tx" type="slide" axis="-1 0 0" range="-0.23000000000000001 0.089999999999999997" damping="67.476218032726166"/>
+        <joint name="lh_shadow_hand/forearm_ty" type="slide" axis="0 0 1" range="-0.01 0.10000000000000001" damping="67.476218032726166"/>
+        <joint name="lh_shadow_hand/forearm_tz" type="slide" axis="0 1 0" range="-0.10000000000000001 0.02" damping="123.19415570553662"/>
+        <site name="lh_shadow_hand/forearm_tx_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+        <site name="lh_shadow_hand/forearm_ty_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+        <site name="lh_shadow_hand/forearm_tz_site" type="box" group="4" rgba="0 1 0 1" size="0.001 0.001 0.001"/>
+      </body>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude name="lh_shadow_hand//unnamed_contact_0" body1="lh_shadow_hand/lh_wrist" body2="lh_shadow_hand/lh_forearm"/>
+    <exclude name="lh_shadow_hand//unnamed_contact_1" body1="lh_shadow_hand/lh_thproximal" body2="lh_shadow_hand/lh_thmiddle"/>
+  </contact>
+  <tendon>
+    <fixed name="rh_shadow_hand/rh_FFJ0" class="rh_shadow_hand/">
+      <joint joint="rh_shadow_hand/rh_FFJ2" coef="1"/>
+      <joint joint="rh_shadow_hand/rh_FFJ1" coef="1"/>
+    </fixed>
+    <fixed name="rh_shadow_hand/rh_MFJ0" class="rh_shadow_hand/">
+      <joint joint="rh_shadow_hand/rh_MFJ2" coef="1"/>
+      <joint joint="rh_shadow_hand/rh_MFJ1" coef="1"/>
+    </fixed>
+    <fixed name="rh_shadow_hand/rh_RFJ0" class="rh_shadow_hand/">
+      <joint joint="rh_shadow_hand/rh_RFJ2" coef="1"/>
+      <joint joint="rh_shadow_hand/rh_RFJ1" coef="1"/>
+    </fixed>
+    <fixed name="rh_shadow_hand/rh_LFJ0" class="rh_shadow_hand/">
+      <joint joint="rh_shadow_hand/rh_LFJ2" coef="1"/>
+      <joint joint="rh_shadow_hand/rh_LFJ1" coef="1"/>
+    </fixed>
+    <fixed name="lh_shadow_hand/lh_FFJ0" class="lh_shadow_hand/">
+      <joint joint="lh_shadow_hand/lh_FFJ2" coef="1"/>
+      <joint joint="lh_shadow_hand/lh_FFJ1" coef="1"/>
+    </fixed>
+    <fixed name="lh_shadow_hand/lh_MFJ0" class="lh_shadow_hand/">
+      <joint joint="lh_shadow_hand/lh_MFJ2" coef="1"/>
+      <joint joint="lh_shadow_hand/lh_MFJ1" coef="1"/>
+    </fixed>
+    <fixed name="lh_shadow_hand/lh_RFJ0" class="lh_shadow_hand/">
+      <joint joint="lh_shadow_hand/lh_RFJ2" coef="1"/>
+      <joint joint="lh_shadow_hand/lh_RFJ1" coef="1"/>
+    </fixed>
+    <fixed name="lh_shadow_hand/lh_LFJ0" class="lh_shadow_hand/">
+      <joint joint="lh_shadow_hand/lh_LFJ2" coef="1"/>
+      <joint joint="lh_shadow_hand/lh_LFJ1" coef="1"/>
+    </fixed>
+  </tendon>
+  <actuator>
+    <position name="lh_shadow_hand/lh_A_WRJ2" class="lh_shadow_hand/wrist_y" ctrlrange="-0.0001 0.0001" joint="lh_shadow_hand/lh_WRJ2"/>
+    <position name="lh_shadow_hand/lh_A_WRJ1" class="lh_shadow_hand/wrist_x" ctrlrange="0 0.78900000000000003" joint="lh_shadow_hand/lh_WRJ1"/>
+    <position name="lh_shadow_hand/lh_A_THJ4" class="lh_shadow_hand/thproximal" ctrlrange="-0.0001 0.0001" joint="lh_shadow_hand/lh_THJ4"/>
+    <position name="lh_shadow_hand/lh_A_THJ3" class="lh_shadow_hand/thhub" ctrlrange="-0.0001 0.0001" joint="lh_shadow_hand/lh_THJ3"/>
+    <position name="lh_shadow_hand/lh_A_THJ2" class="lh_shadow_hand/thmiddle" ctrlrange="0 0.69813199999999997" joint="lh_shadow_hand/lh_THJ2"/>
+    <position name="lh_shadow_hand/lh_A_FFJ4" class="lh_shadow_hand/knuckle" ctrlrange="-0.34899999999999998 0.34899999999999998" joint="lh_shadow_hand/lh_FFJ4"/>
+    <position name="lh_shadow_hand/lh_A_FFJ3" class="lh_shadow_hand/proximal" ctrlrange="0 1.5700000000000001" joint="lh_shadow_hand/lh_FFJ3"/>
+    <position name="lh_shadow_hand/lh_A_FFJ0" class="lh_shadow_hand/middle_distal" ctrlrange="0 2" tendon="lh_shadow_hand/lh_FFJ0"/>
+    <position name="lh_shadow_hand/lh_A_MFJ4" class="lh_shadow_hand/knuckle" ctrlrange="-0.34899999999999998 0.34899999999999998" joint="lh_shadow_hand/lh_MFJ4"/>
+    <position name="lh_shadow_hand/lh_A_MFJ3" class="lh_shadow_hand/proximal" ctrlrange="0 1.5700000000000001" joint="lh_shadow_hand/lh_MFJ3"/>
+    <position name="lh_shadow_hand/lh_A_MFJ0" class="lh_shadow_hand/middle_distal" ctrlrange="0 2" tendon="lh_shadow_hand/lh_MFJ0"/>
+    <position name="lh_shadow_hand/lh_A_RFJ4" class="lh_shadow_hand/knuckle" ctrlrange="-0.34899999999999998 0.34899999999999998" joint="lh_shadow_hand/lh_RFJ4"/>
+    <position name="lh_shadow_hand/lh_A_RFJ3" class="lh_shadow_hand/proximal" ctrlrange="0 1.5700000000000001" joint="lh_shadow_hand/lh_RFJ3"/>
+    <position name="lh_shadow_hand/lh_A_RFJ0" class="lh_shadow_hand/middle_distal" ctrlrange="0 2" tendon="lh_shadow_hand/lh_RFJ0"/>
+    <position name="lh_shadow_hand/lh_A_LFJ4" class="lh_shadow_hand/knuckle" ctrlrange="-0.34899999999999998 0.34899999999999998" joint="lh_shadow_hand/lh_LFJ4"/>
+    <position name="lh_shadow_hand/lh_A_LFJ3" class="lh_shadow_hand/proximal" ctrlrange="0 1.5700000000000001" joint="lh_shadow_hand/lh_LFJ3"/>
+    <position name="lh_shadow_hand/lh_A_LFJ0" class="lh_shadow_hand/middle_distal" ctrlrange="0 2" tendon="lh_shadow_hand/lh_LFJ0"/>
+    <position name="lh_shadow_hand/forearm_tx" class="lh_shadow_hand/" ctrlrange="-0.23000000000000001 0.089999999999999997" joint="lh_shadow_hand/forearm_tx" kp="300"/>
+    <position name="lh_shadow_hand/forearm_ty" class="lh_shadow_hand/" ctrlrange="-0.01 0.10000000000000001" joint="lh_shadow_hand/forearm_ty" kp="300"/>
+    <position name="lh_shadow_hand/forearm_tz" class="lh_shadow_hand/" ctrlrange="-0.10000000000000001 0.02" joint="lh_shadow_hand/forearm_tz" kp="1000"/>
+  </actuator>
+  <sensor>
+    <touch name="//unnamed_sensor_0" site="key 1 1"/>
+    <touch name="//unnamed_sensor_1" site="key 2 1"/>
+    <touch name="//unnamed_sensor_2" site="key 3 1"/>
+    <touch name="//unnamed_sensor_3" site="key 4 1"/>
+    <touch name="//unnamed_sensor_4" site="key 5 1"/>
+    <touch name="//unnamed_sensor_5" site="key 6 1"/>
+    <touch name="//unnamed_sensor_6" site="key 1 2"/>
+    <touch name="//unnamed_sensor_7" site="key 2 2"/>
+    <touch name="//unnamed_sensor_8" site="key 3 2"/>
+    <touch name="//unnamed_sensor_9" site="key 4 2"/>
+    <touch name="//unnamed_sensor_10" site="key 5 2"/>
+    <touch name="//unnamed_sensor_11" site="key 6 2"/>
+    <touch name="//unnamed_sensor_12" site="key 1 3"/>
+    <touch name="//unnamed_sensor_13" site="key 2 3"/>
+    <touch name="//unnamed_sensor_14" site="key 3 3"/>
+    <touch name="//unnamed_sensor_15" site="key 4 3"/>
+    <touch name="//unnamed_sensor_16" site="key 5 3"/>
+    <touch name="//unnamed_sensor_17" site="key 6 3"/>
+    <touch name="//unnamed_sensor_18" site="key 1 4"/>
+    <touch name="//unnamed_sensor_19" site="key 2 4"/>
+    <touch name="//unnamed_sensor_20" site="key 3 4"/>
+    <touch name="//unnamed_sensor_21" site="key 4 4"/>
+    <touch name="//unnamed_sensor_22" site="key 5 4"/>
+    <touch name="//unnamed_sensor_23" site="key 6 4"/>
+    <touch name="//unnamed_sensor_24" site="key 1 5"/>
+    <touch name="//unnamed_sensor_25" site="key 2 5"/>
+    <touch name="//unnamed_sensor_26" site="key 3 5"/>
+    <touch name="//unnamed_sensor_27" site="key 4 5"/>
+    <touch name="//unnamed_sensor_28" site="key 5 5"/>
+    <touch name="//unnamed_sensor_29" site="key 6 5"/>
+    <touch name="//unnamed_sensor_30" site="key 1 6"/>
+    <touch name="//unnamed_sensor_31" site="key 2 6"/>
+    <touch name="//unnamed_sensor_32" site="key 3 6"/>
+    <touch name="//unnamed_sensor_33" site="key 4 6"/>
+    <touch name="//unnamed_sensor_34" site="key 5 6"/>
+    <touch name="//unnamed_sensor_35" site="key 6 6"/>
+    <touch name="//unnamed_sensor_36" site="key 1 7"/>
+    <touch name="//unnamed_sensor_37" site="key 2 7"/>
+    <touch name="//unnamed_sensor_38" site="key 3 7"/>
+    <touch name="//unnamed_sensor_39" site="key 4 7"/>
+    <touch name="//unnamed_sensor_40" site="key 5 7"/>
+    <touch name="//unnamed_sensor_41" site="key 6 7"/>
+    <touch name="//unnamed_sensor_42" site="key 1 8"/>
+    <touch name="//unnamed_sensor_43" site="key 2 8"/>
+    <touch name="//unnamed_sensor_44" site="key 3 8"/>
+    <touch name="//unnamed_sensor_45" site="key 4 8"/>
+    <touch name="//unnamed_sensor_46" site="key 5 8"/>
+    <touch name="//unnamed_sensor_47" site="key 6 8"/>
+    <touch name="//unnamed_sensor_48" site="key 1 9"/>
+    <touch name="//unnamed_sensor_49" site="key 2 9"/>
+    <touch name="//unnamed_sensor_50" site="key 3 9"/>
+    <touch name="//unnamed_sensor_51" site="key 4 9"/>
+    <touch name="//unnamed_sensor_52" site="key 5 9"/>
+    <touch name="//unnamed_sensor_53" site="key 6 9"/>
+    <touch name="//unnamed_sensor_54" site="key 1 10"/>
+    <touch name="//unnamed_sensor_55" site="key 2 10"/>
+    <touch name="//unnamed_sensor_56" site="key 3 10"/>
+    <touch name="//unnamed_sensor_57" site="key 4 10"/>
+    <touch name="//unnamed_sensor_58" site="key 5 10"/>
+    <touch name="//unnamed_sensor_59" site="key 6 10"/>
+    <touch name="//unnamed_sensor_60" site="key 1 11"/>
+    <touch name="//unnamed_sensor_61" site="key 2 11"/>
+    <touch name="//unnamed_sensor_62" site="key 3 11"/>
+    <touch name="//unnamed_sensor_63" site="key 4 11"/>
+    <touch name="//unnamed_sensor_64" site="key 5 11"/>
+    <touch name="//unnamed_sensor_65" site="key 6 11"/>
+    <touch name="//unnamed_sensor_66" site="key 1 12"/>
+    <touch name="//unnamed_sensor_67" site="key 2 12"/>
+    <touch name="//unnamed_sensor_68" site="key 3 12"/>
+    <touch name="//unnamed_sensor_69" site="key 4 12"/>
+    <touch name="//unnamed_sensor_70" site="key 5 12"/>
+    <touch name="//unnamed_sensor_71" site="key 6 12"/>
+    <touch name="//unnamed_sensor_72" site="key 1 13"/>
+    <touch name="//unnamed_sensor_73" site="key 2 13"/>
+    <touch name="//unnamed_sensor_74" site="key 3 13"/>
+    <touch name="//unnamed_sensor_75" site="key 4 13"/>
+    <touch name="//unnamed_sensor_76" site="key 5 13"/>
+    <touch name="//unnamed_sensor_77" site="key 6 13"/>
+    <touch name="//unnamed_sensor_78" site="key 1 14"/>
+    <touch name="//unnamed_sensor_79" site="key 2 14"/>
+    <touch name="//unnamed_sensor_80" site="key 3 14"/>
+    <touch name="//unnamed_sensor_81" site="key 4 14"/>
+    <touch name="//unnamed_sensor_82" site="key 5 14"/>
+    <touch name="//unnamed_sensor_83" site="key 6 14"/>
+    <touch name="//unnamed_sensor_84" site="key 1 15"/>
+    <touch name="//unnamed_sensor_85" site="key 2 15"/>
+    <touch name="//unnamed_sensor_86" site="key 3 15"/>
+    <touch name="//unnamed_sensor_87" site="key 4 15"/>
+    <touch name="//unnamed_sensor_88" site="key 5 15"/>
+    <touch name="//unnamed_sensor_89" site="key 6 15"/>
+    <touch name="//unnamed_sensor_90" site="key 1 16"/>
+    <touch name="//unnamed_sensor_91" site="key 2 16"/>
+    <touch name="//unnamed_sensor_92" site="key 3 16"/>
+    <touch name="//unnamed_sensor_93" site="key 4 16"/>
+    <touch name="//unnamed_sensor_94" site="key 5 16"/>
+    <touch name="//unnamed_sensor_95" site="key 6 16"/>
+    <touch name="//unnamed_sensor_96" site="key 1 17"/>
+    <touch name="//unnamed_sensor_97" site="key 2 17"/>
+    <touch name="//unnamed_sensor_98" site="key 3 17"/>
+    <touch name="//unnamed_sensor_99" site="key 4 17"/>
+    <touch name="//unnamed_sensor_100" site="key 5 17"/>
+    <touch name="//unnamed_sensor_101" site="key 6 17"/>
+    <touch name="//unnamed_sensor_102" site="key 1 18"/>
+    <touch name="//unnamed_sensor_103" site="key 2 18"/>
+    <touch name="//unnamed_sensor_104" site="key 3 18"/>
+    <touch name="//unnamed_sensor_105" site="key 4 18"/>
+    <touch name="//unnamed_sensor_106" site="key 5 18"/>
+    <touch name="//unnamed_sensor_107" site="key 6 18"/>
+    <touch name="//unnamed_sensor_108" site="key 1 19"/>
+    <touch name="//unnamed_sensor_109" site="key 2 19"/>
+    <touch name="//unnamed_sensor_110" site="key 3 19"/>
+    <touch name="//unnamed_sensor_111" site="key 4 19"/>
+    <touch name="//unnamed_sensor_112" site="key 5 19"/>
+    <touch name="//unnamed_sensor_113" site="key 6 19"/>
+    <touch name="//unnamed_sensor_114" site="key 1 20"/>
+    <touch name="//unnamed_sensor_115" site="key 2 20"/>
+    <touch name="//unnamed_sensor_116" site="key 3 20"/>
+    <touch name="//unnamed_sensor_117" site="key 4 20"/>
+    <touch name="//unnamed_sensor_118" site="key 5 20"/>
+    <touch name="//unnamed_sensor_119" site="key 6 20"/>
+    <framepos name="//unnamed_sensor_120" objtype="site" objname="key 1 1"/>
+    <framepos name="//unnamed_sensor_121" objtype="site" objname="key 2 1"/>
+    <framepos name="//unnamed_sensor_122" objtype="site" objname="key 3 1"/>
+    <framepos name="//unnamed_sensor_123" objtype="site" objname="key 4 1"/>
+    <framepos name="//unnamed_sensor_124" objtype="site" objname="key 5 1"/>
+    <framepos name="//unnamed_sensor_125" objtype="site" objname="key 6 1"/>
+    <framepos name="//unnamed_sensor_126" objtype="site" objname="key 1 2"/>
+    <framepos name="//unnamed_sensor_127" objtype="site" objname="key 2 2"/>
+    <framepos name="//unnamed_sensor_128" objtype="site" objname="key 3 2"/>
+    <framepos name="//unnamed_sensor_129" objtype="site" objname="key 4 2"/>
+    <framepos name="//unnamed_sensor_130" objtype="site" objname="key 5 2"/>
+    <framepos name="//unnamed_sensor_131" objtype="site" objname="key 6 2"/>
+    <framepos name="//unnamed_sensor_132" objtype="site" objname="key 1 3"/>
+    <framepos name="//unnamed_sensor_133" objtype="site" objname="key 2 3"/>
+    <framepos name="//unnamed_sensor_134" objtype="site" objname="key 3 3"/>
+    <framepos name="//unnamed_sensor_135" objtype="site" objname="key 4 3"/>
+    <framepos name="//unnamed_sensor_136" objtype="site" objname="key 5 3"/>
+    <framepos name="//unnamed_sensor_137" objtype="site" objname="key 6 3"/>
+    <framepos name="//unnamed_sensor_138" objtype="site" objname="key 1 4"/>
+    <framepos name="//unnamed_sensor_139" objtype="site" objname="key 2 4"/>
+    <framepos name="//unnamed_sensor_140" objtype="site" objname="key 3 4"/>
+    <framepos name="//unnamed_sensor_141" objtype="site" objname="key 4 4"/>
+    <framepos name="//unnamed_sensor_142" objtype="site" objname="key 5 4"/>
+    <framepos name="//unnamed_sensor_143" objtype="site" objname="key 6 4"/>
+    <framepos name="//unnamed_sensor_144" objtype="site" objname="key 1 5"/>
+    <framepos name="//unnamed_sensor_145" objtype="site" objname="key 2 5"/>
+    <framepos name="//unnamed_sensor_146" objtype="site" objname="key 3 5"/>
+    <framepos name="//unnamed_sensor_147" objtype="site" objname="key 4 5"/>
+    <framepos name="//unnamed_sensor_148" objtype="site" objname="key 5 5"/>
+    <framepos name="//unnamed_sensor_149" objtype="site" objname="key 6 5"/>
+    <framepos name="//unnamed_sensor_150" objtype="site" objname="key 1 6"/>
+    <framepos name="//unnamed_sensor_151" objtype="site" objname="key 2 6"/>
+    <framepos name="//unnamed_sensor_152" objtype="site" objname="key 3 6"/>
+    <framepos name="//unnamed_sensor_153" objtype="site" objname="key 4 6"/>
+    <framepos name="//unnamed_sensor_154" objtype="site" objname="key 5 6"/>
+    <framepos name="//unnamed_sensor_155" objtype="site" objname="key 6 6"/>
+    <framepos name="//unnamed_sensor_156" objtype="site" objname="key 1 7"/>
+    <framepos name="//unnamed_sensor_157" objtype="site" objname="key 2 7"/>
+    <framepos name="//unnamed_sensor_158" objtype="site" objname="key 3 7"/>
+    <framepos name="//unnamed_sensor_159" objtype="site" objname="key 4 7"/>
+    <framepos name="//unnamed_sensor_160" objtype="site" objname="key 5 7"/>
+    <framepos name="//unnamed_sensor_161" objtype="site" objname="key 6 7"/>
+    <framepos name="//unnamed_sensor_162" objtype="site" objname="key 1 8"/>
+    <framepos name="//unnamed_sensor_163" objtype="site" objname="key 2 8"/>
+    <framepos name="//unnamed_sensor_164" objtype="site" objname="key 3 8"/>
+    <framepos name="//unnamed_sensor_165" objtype="site" objname="key 4 8"/>
+    <framepos name="//unnamed_sensor_166" objtype="site" objname="key 5 8"/>
+    <framepos name="//unnamed_sensor_167" objtype="site" objname="key 6 8"/>
+    <framepos name="//unnamed_sensor_168" objtype="site" objname="key 1 9"/>
+    <framepos name="//unnamed_sensor_169" objtype="site" objname="key 2 9"/>
+    <framepos name="//unnamed_sensor_170" objtype="site" objname="key 3 9"/>
+    <framepos name="//unnamed_sensor_171" objtype="site" objname="key 4 9"/>
+    <framepos name="//unnamed_sensor_172" objtype="site" objname="key 5 9"/>
+    <framepos name="//unnamed_sensor_173" objtype="site" objname="key 6 9"/>
+    <framepos name="//unnamed_sensor_174" objtype="site" objname="key 1 10"/>
+    <framepos name="//unnamed_sensor_175" objtype="site" objname="key 2 10"/>
+    <framepos name="//unnamed_sensor_176" objtype="site" objname="key 3 10"/>
+    <framepos name="//unnamed_sensor_177" objtype="site" objname="key 4 10"/>
+    <framepos name="//unnamed_sensor_178" objtype="site" objname="key 5 10"/>
+    <framepos name="//unnamed_sensor_179" objtype="site" objname="key 6 10"/>
+    <framepos name="//unnamed_sensor_180" objtype="site" objname="key 1 11"/>
+    <framepos name="//unnamed_sensor_181" objtype="site" objname="key 2 11"/>
+    <framepos name="//unnamed_sensor_182" objtype="site" objname="key 3 11"/>
+    <framepos name="//unnamed_sensor_183" objtype="site" objname="key 4 11"/>
+    <framepos name="//unnamed_sensor_184" objtype="site" objname="key 5 11"/>
+    <framepos name="//unnamed_sensor_185" objtype="site" objname="key 6 11"/>
+    <framepos name="//unnamed_sensor_186" objtype="site" objname="key 1 12"/>
+    <framepos name="//unnamed_sensor_187" objtype="site" objname="key 2 12"/>
+    <framepos name="//unnamed_sensor_188" objtype="site" objname="key 3 12"/>
+    <framepos name="//unnamed_sensor_189" objtype="site" objname="key 4 12"/>
+    <framepos name="//unnamed_sensor_190" objtype="site" objname="key 5 12"/>
+    <framepos name="//unnamed_sensor_191" objtype="site" objname="key 6 12"/>
+    <framepos name="//unnamed_sensor_192" objtype="site" objname="key 1 13"/>
+    <framepos name="//unnamed_sensor_193" objtype="site" objname="key 2 13"/>
+    <framepos name="//unnamed_sensor_194" objtype="site" objname="key 3 13"/>
+    <framepos name="//unnamed_sensor_195" objtype="site" objname="key 4 13"/>
+    <framepos name="//unnamed_sensor_196" objtype="site" objname="key 5 13"/>
+    <framepos name="//unnamed_sensor_197" objtype="site" objname="key 6 13"/>
+    <framepos name="//unnamed_sensor_198" objtype="site" objname="key 1 14"/>
+    <framepos name="//unnamed_sensor_199" objtype="site" objname="key 2 14"/>
+    <framepos name="//unnamed_sensor_200" objtype="site" objname="key 3 14"/>
+    <framepos name="//unnamed_sensor_201" objtype="site" objname="key 4 14"/>
+    <framepos name="//unnamed_sensor_202" objtype="site" objname="key 5 14"/>
+    <framepos name="//unnamed_sensor_203" objtype="site" objname="key 6 14"/>
+    <framepos name="//unnamed_sensor_204" objtype="site" objname="key 1 15"/>
+    <framepos name="//unnamed_sensor_205" objtype="site" objname="key 2 15"/>
+    <framepos name="//unnamed_sensor_206" objtype="site" objname="key 3 15"/>
+    <framepos name="//unnamed_sensor_207" objtype="site" objname="key 4 15"/>
+    <framepos name="//unnamed_sensor_208" objtype="site" objname="key 5 15"/>
+    <framepos name="//unnamed_sensor_209" objtype="site" objname="key 6 15"/>
+    <framepos name="//unnamed_sensor_210" objtype="site" objname="key 1 16"/>
+    <framepos name="//unnamed_sensor_211" objtype="site" objname="key 2 16"/>
+    <framepos name="//unnamed_sensor_212" objtype="site" objname="key 3 16"/>
+    <framepos name="//unnamed_sensor_213" objtype="site" objname="key 4 16"/>
+    <framepos name="//unnamed_sensor_214" objtype="site" objname="key 5 16"/>
+    <framepos name="//unnamed_sensor_215" objtype="site" objname="key 6 16"/>
+    <framepos name="//unnamed_sensor_216" objtype="site" objname="key 1 17"/>
+    <framepos name="//unnamed_sensor_217" objtype="site" objname="key 2 17"/>
+    <framepos name="//unnamed_sensor_218" objtype="site" objname="key 3 17"/>
+    <framepos name="//unnamed_sensor_219" objtype="site" objname="key 4 17"/>
+    <framepos name="//unnamed_sensor_220" objtype="site" objname="key 5 17"/>
+    <framepos name="//unnamed_sensor_221" objtype="site" objname="key 6 17"/>
+    <framepos name="//unnamed_sensor_222" objtype="site" objname="key 1 18"/>
+    <framepos name="//unnamed_sensor_223" objtype="site" objname="key 2 18"/>
+    <framepos name="//unnamed_sensor_224" objtype="site" objname="key 3 18"/>
+    <framepos name="//unnamed_sensor_225" objtype="site" objname="key 4 18"/>
+    <framepos name="//unnamed_sensor_226" objtype="site" objname="key 5 18"/>
+    <framepos name="//unnamed_sensor_227" objtype="site" objname="key 6 18"/>
+    <framepos name="//unnamed_sensor_228" objtype="site" objname="key 1 19"/>
+    <framepos name="//unnamed_sensor_229" objtype="site" objname="key 2 19"/>
+    <framepos name="//unnamed_sensor_230" objtype="site" objname="key 3 19"/>
+    <framepos name="//unnamed_sensor_231" objtype="site" objname="key 4 19"/>
+    <framepos name="//unnamed_sensor_232" objtype="site" objname="key 5 19"/>
+    <framepos name="//unnamed_sensor_233" objtype="site" objname="key 6 19"/>
+    <framepos name="//unnamed_sensor_234" objtype="site" objname="key 1 20"/>
+    <framepos name="//unnamed_sensor_235" objtype="site" objname="key 2 20"/>
+    <framepos name="//unnamed_sensor_236" objtype="site" objname="key 3 20"/>
+    <framepos name="//unnamed_sensor_237" objtype="site" objname="key 4 20"/>
+    <framepos name="//unnamed_sensor_238" objtype="site" objname="key 5 20"/>
+    <framepos name="//unnamed_sensor_239" objtype="site" objname="key 6 20"/>
+    <torque name="rh_shadow_hand/rh_WRJ2_torque" site="rh_shadow_hand/rh_WRJ2_site"/>
+    <torque name="rh_shadow_hand/rh_WRJ1_torque" site="rh_shadow_hand/rh_WRJ1_site"/>
+    <torque name="rh_shadow_hand/rh_FFJ4_torque" site="rh_shadow_hand/rh_FFJ4_site"/>
+    <torque name="rh_shadow_hand/rh_FFJ3_torque" site="rh_shadow_hand/rh_FFJ3_site"/>
+    <torque name="rh_shadow_hand/rh_FFJ2_torque" site="rh_shadow_hand/rh_FFJ2_site"/>
+    <torque name="rh_shadow_hand/rh_FFJ1_torque" site="rh_shadow_hand/rh_FFJ1_site"/>
+    <torque name="rh_shadow_hand/rh_MFJ4_torque" site="rh_shadow_hand/rh_MFJ4_site"/>
+    <torque name="rh_shadow_hand/rh_MFJ3_torque" site="rh_shadow_hand/rh_MFJ3_site"/>
+    <torque name="rh_shadow_hand/rh_MFJ2_torque" site="rh_shadow_hand/rh_MFJ2_site"/>
+    <torque name="rh_shadow_hand/rh_MFJ1_torque" site="rh_shadow_hand/rh_MFJ1_site"/>
+    <torque name="rh_shadow_hand/rh_RFJ4_torque" site="rh_shadow_hand/rh_RFJ4_site"/>
+    <torque name="rh_shadow_hand/rh_RFJ3_torque" site="rh_shadow_hand/rh_RFJ3_site"/>
+    <torque name="rh_shadow_hand/rh_RFJ2_torque" site="rh_shadow_hand/rh_RFJ2_site"/>
+    <torque name="rh_shadow_hand/rh_RFJ1_torque" site="rh_shadow_hand/rh_RFJ1_site"/>
+    <torque name="rh_shadow_hand/rh_LFJ4_torque" site="rh_shadow_hand/rh_LFJ4_site"/>
+    <torque name="rh_shadow_hand/rh_LFJ3_torque" site="rh_shadow_hand/rh_LFJ3_site"/>
+    <torque name="rh_shadow_hand/rh_LFJ2_torque" site="rh_shadow_hand/rh_LFJ2_site"/>
+    <torque name="rh_shadow_hand/rh_LFJ1_torque" site="rh_shadow_hand/rh_LFJ1_site"/>
+    <torque name="rh_shadow_hand/rh_THJ6_torque" site="rh_shadow_hand/rh_THJ6_site"/>
+    <torque name="rh_shadow_hand/rh_THJ4_torque" site="rh_shadow_hand/rh_THJ4_site"/>
+    <torque name="rh_shadow_hand/rh_THJ3_torque" site="rh_shadow_hand/rh_THJ3_site"/>
+    <torque name="rh_shadow_hand/rh_THJ2_torque" site="rh_shadow_hand/rh_THJ2_site"/>
+    <touch name="rh_shadow_hand/thdistal_touch" site="rh_shadow_hand/thdistal_touch_site"/>
+    <touch name="rh_shadow_hand/ffdistal_touch" site="rh_shadow_hand/ffdistal_touch_site"/>
+    <touch name="rh_shadow_hand/mfdistal_touch" site="rh_shadow_hand/mfdistal_touch_site"/>
+    <touch name="rh_shadow_hand/rfdistal_touch" site="rh_shadow_hand/rfdistal_touch_site"/>
+    <touch name="rh_shadow_hand/lfdistal_touch" site="rh_shadow_hand/lfdistal_touch_site"/>
+    <torque name="lh_shadow_hand/lh_WRJ2_torque" site="lh_shadow_hand/lh_WRJ2_site"/>
+    <torque name="lh_shadow_hand/lh_WRJ1_torque" site="lh_shadow_hand/lh_WRJ1_site"/>
+    <torque name="lh_shadow_hand/lh_FFJ4_torque" site="lh_shadow_hand/lh_FFJ4_site"/>
+    <torque name="lh_shadow_hand/lh_FFJ3_torque" site="lh_shadow_hand/lh_FFJ3_site"/>
+    <torque name="lh_shadow_hand/lh_FFJ2_torque" site="lh_shadow_hand/lh_FFJ2_site"/>
+    <torque name="lh_shadow_hand/lh_FFJ1_torque" site="lh_shadow_hand/lh_FFJ1_site"/>
+    <torque name="lh_shadow_hand/lh_MFJ4_torque" site="lh_shadow_hand/lh_MFJ4_site"/>
+    <torque name="lh_shadow_hand/lh_MFJ3_torque" site="lh_shadow_hand/lh_MFJ3_site"/>
+    <torque name="lh_shadow_hand/lh_MFJ2_torque" site="lh_shadow_hand/lh_MFJ2_site"/>
+    <torque name="lh_shadow_hand/lh_MFJ1_torque" site="lh_shadow_hand/lh_MFJ1_site"/>
+    <torque name="lh_shadow_hand/lh_RFJ4_torque" site="lh_shadow_hand/lh_RFJ4_site"/>
+    <torque name="lh_shadow_hand/lh_RFJ3_torque" site="lh_shadow_hand/lh_RFJ3_site"/>
+    <torque name="lh_shadow_hand/lh_RFJ2_torque" site="lh_shadow_hand/lh_RFJ2_site"/>
+    <torque name="lh_shadow_hand/lh_RFJ1_torque" site="lh_shadow_hand/lh_RFJ1_site"/>
+    <torque name="lh_shadow_hand/lh_LFJ4_torque" site="lh_shadow_hand/lh_LFJ4_site"/>
+    <torque name="lh_shadow_hand/lh_LFJ3_torque" site="lh_shadow_hand/lh_LFJ3_site"/>
+    <torque name="lh_shadow_hand/lh_LFJ2_torque" site="lh_shadow_hand/lh_LFJ2_site"/>
+    <torque name="lh_shadow_hand/lh_LFJ1_torque" site="lh_shadow_hand/lh_LFJ1_site"/>
+    <torque name="lh_shadow_hand/lh_THJ4_torque" site="lh_shadow_hand/lh_THJ4_site"/>
+    <torque name="lh_shadow_hand/lh_THJ3_torque" site="lh_shadow_hand/lh_THJ3_site"/>
+    <torque name="lh_shadow_hand/lh_THJ2_torque" site="lh_shadow_hand/lh_THJ2_site"/>
+    <torque name="lh_shadow_hand/forearm_tx_torque" site="lh_shadow_hand/forearm_tx_site"/>
+    <torque name="lh_shadow_hand/forearm_ty_torque" site="lh_shadow_hand/forearm_ty_site"/>
+    <torque name="lh_shadow_hand/forearm_tz_torque" site="lh_shadow_hand/forearm_tz_site"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_WRJ2_velocity" actuator="lh_shadow_hand/lh_A_WRJ2"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_WRJ2_force" actuator="lh_shadow_hand/lh_A_WRJ2"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_WRJ1_velocity" actuator="lh_shadow_hand/lh_A_WRJ1"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_WRJ1_force" actuator="lh_shadow_hand/lh_A_WRJ1"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_THJ4_velocity" actuator="lh_shadow_hand/lh_A_THJ4"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_THJ4_force" actuator="lh_shadow_hand/lh_A_THJ4"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_THJ3_velocity" actuator="lh_shadow_hand/lh_A_THJ3"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_THJ3_force" actuator="lh_shadow_hand/lh_A_THJ3"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_THJ2_velocity" actuator="lh_shadow_hand/lh_A_THJ2"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_THJ2_force" actuator="lh_shadow_hand/lh_A_THJ2"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_FFJ4_velocity" actuator="lh_shadow_hand/lh_A_FFJ4"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_FFJ4_force" actuator="lh_shadow_hand/lh_A_FFJ4"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_FFJ3_velocity" actuator="lh_shadow_hand/lh_A_FFJ3"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_FFJ3_force" actuator="lh_shadow_hand/lh_A_FFJ3"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_FFJ0_velocity" actuator="lh_shadow_hand/lh_A_FFJ0"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_FFJ0_force" actuator="lh_shadow_hand/lh_A_FFJ0"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_MFJ4_velocity" actuator="lh_shadow_hand/lh_A_MFJ4"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_MFJ4_force" actuator="lh_shadow_hand/lh_A_MFJ4"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_MFJ3_velocity" actuator="lh_shadow_hand/lh_A_MFJ3"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_MFJ3_force" actuator="lh_shadow_hand/lh_A_MFJ3"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_MFJ0_velocity" actuator="lh_shadow_hand/lh_A_MFJ0"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_MFJ0_force" actuator="lh_shadow_hand/lh_A_MFJ0"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_RFJ4_velocity" actuator="lh_shadow_hand/lh_A_RFJ4"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_RFJ4_force" actuator="lh_shadow_hand/lh_A_RFJ4"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_RFJ3_velocity" actuator="lh_shadow_hand/lh_A_RFJ3"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_RFJ3_force" actuator="lh_shadow_hand/lh_A_RFJ3"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_RFJ0_velocity" actuator="lh_shadow_hand/lh_A_RFJ0"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_RFJ0_force" actuator="lh_shadow_hand/lh_A_RFJ0"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_LFJ4_velocity" actuator="lh_shadow_hand/lh_A_LFJ4"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_LFJ4_force" actuator="lh_shadow_hand/lh_A_LFJ4"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_LFJ3_velocity" actuator="lh_shadow_hand/lh_A_LFJ3"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_LFJ3_force" actuator="lh_shadow_hand/lh_A_LFJ3"/>
+    <actuatorvel name="lh_shadow_hand/lh_A_LFJ0_velocity" actuator="lh_shadow_hand/lh_A_LFJ0"/>
+    <actuatorfrc name="lh_shadow_hand/lh_A_LFJ0_force" actuator="lh_shadow_hand/lh_A_LFJ0"/>
+    <actuatorvel name="lh_shadow_hand/forearm_tx_velocity" actuator="lh_shadow_hand/forearm_tx"/>
+    <actuatorfrc name="lh_shadow_hand/forearm_tx_force" actuator="lh_shadow_hand/forearm_tx"/>
+    <actuatorvel name="lh_shadow_hand/forearm_ty_velocity" actuator="lh_shadow_hand/forearm_ty"/>
+    <actuatorfrc name="lh_shadow_hand/forearm_ty_force" actuator="lh_shadow_hand/forearm_ty"/>
+    <actuatorvel name="lh_shadow_hand/forearm_tz_velocity" actuator="lh_shadow_hand/forearm_tz"/>
+    <actuatorfrc name="lh_shadow_hand/forearm_tz_force" actuator="lh_shadow_hand/forearm_tz"/>
+    <touch name="lh_shadow_hand/thdistal_touch" site="lh_shadow_hand/thdistal_touch_site"/>
+    <touch name="lh_shadow_hand/ffdistal_touch" site="lh_shadow_hand/ffdistal_touch_site"/>
+    <touch name="lh_shadow_hand/mfdistal_touch" site="lh_shadow_hand/mfdistal_touch_site"/>
+    <touch name="lh_shadow_hand/rfdistal_touch" site="lh_shadow_hand/rfdistal_touch_site"/>
+    <touch name="lh_shadow_hand/lfdistal_touch" site="lh_shadow_hand/lfdistal_touch_site"/>
+  </sensor>
+</mujoco>

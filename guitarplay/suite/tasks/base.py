@@ -114,6 +114,10 @@ class GuitarTask(GuitarOnlyTask):
             attachment_yaw=attachment_yaw,
             forearm_dofs=forearm_dofs,
         )
+        # print(self.arena.to_xml_string())
+        # with open('scene.xml','w') as f:
+        #     f.write(self.arena.to_xml_string())
+
 
 
       

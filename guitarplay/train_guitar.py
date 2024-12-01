@@ -1,5 +1,5 @@
 import sys
-# sys.path.append('/home/lcy/GPS-GuitarPlaySimulation') #add your project path where contains guitarplay filefolder
+sys.path.append('/home/lcm/guitar/GPS-GuitarPlaySimulation') #add your project path where contains guitarplay filefolder
 # import guitarplay.envs.guitar_gym_env
 # env=guitarplay.envs.guitar_gym_env.GuitarPlayEnv()
 import example
@@ -300,6 +300,8 @@ class Trainer():
         print(f'mean precision score:{np.mean(pres)}')
         print(f'mean recall score:{np.mean(res)}')
         print(f'mean reward :{np.mean(rs)}')
+        
+
     def close(self):
         del self.model.replay_buffer
         del self.model
@@ -371,8 +373,8 @@ args=[
 
 
 def main():
-    # train(args[25])
-    test(args[25])
+    train(args[25])
+    # test(args[25])
 
 def train(a):
     arg=ArgParserTrain().parse_args()
@@ -385,7 +387,7 @@ def train(a):
     arg.sigmoid=a[6]
     arg.batch_size=a[7]
     arg.n_env=4
-    arg.table=1
+    arg.table=8
     arg.gamma=0.84
     arg.env_type='subproc'
     # arg.sigmoid='gaussian'
@@ -414,7 +416,7 @@ def test(a):
     arg.buffer_size=1000000
     arg.gamma=0.84
     # arg.linerlr=True
-    arg.freedom=True
+    # arg.freedom=True
     if(len(a)>8):
         arg.total_step=a[8]
     if(len(a)>9):
