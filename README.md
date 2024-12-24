@@ -25,17 +25,19 @@ Our system works best with Linux OS because JAX has some bugs on Windows OS. For
 4.  Install dependencies：
     ```sh
     conda install python=3.11.5  
-    conda install portaudio  
+    conda install portaudio=19.6.0  
     pip install pyaudio==0.2.12  
-    pip install gymnasium  
+    pip install gymnasium==0.29.1  
     pip install sbx-rl==0.12.0  
+    pip install matplotlib==3.8.4
     pip install tensorflow-probability==0.23.0  
-    pip install dm_control  
-    pip install mujoco_utils  
-    pip install tensorboard  
+    pip install dm_control==1.0.18  
+    pip install mujoco_utils==0.0.6  
+    pip install tensorboard=2.16.2  
+    pip install mujoco==3.1.4
     conda install jax -c conda-forge  
     conda install jaxlib=*=*cuda* jax cuda-nvcc -c conda-forge -c nvidia
-    pip install dm_env_wrappers
+    pip install dm_env_wrappers==0.0.13
     ```
 
 ## Usage
