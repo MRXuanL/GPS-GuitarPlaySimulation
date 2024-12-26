@@ -33,7 +33,7 @@ Our system works best with Linux OS because JAX has some bugs on Windows OS. For
     pip install tensorflow-probability==0.23.0  
     pip install dm_control==1.0.18  
     pip install mujoco_utils==0.0.6  
-    pip install tensorboard=2.16.2  
+    pip install tensorboard==2.16.2  
     pip install mujoco==3.1.4
     conda install jax -c conda-forge  
     conda install jaxlib=*=*cuda* jax cuda-nvcc -c conda-forge -c nvidia
